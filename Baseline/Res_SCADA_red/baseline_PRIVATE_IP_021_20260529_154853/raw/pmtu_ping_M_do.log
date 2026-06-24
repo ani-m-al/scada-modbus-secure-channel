@@ -1,0 +1,100 @@
+## size=1200
+PING PRIVATE_IP_021 (PRIVATE_IP_021) 1200(1228) bytes of data.
+1208 bytes from PRIVATE_IP_021: icmp_seq=1 ttl=63 time=7.23 ms
+1208 bytes from PRIVATE_IP_021: icmp_seq=2 ttl=63 time=8.05 ms
+1208 bytes from PRIVATE_IP_021: icmp_seq=3 ttl=63 time=7.52 ms
+
+--- PRIVATE_IP_021 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 7.231/7.602/8.053/0.340 ms
+
+## size=1280
+PING PRIVATE_IP_021 (PRIVATE_IP_021) 1280(1308) bytes of data.
+1288 bytes from PRIVATE_IP_021: icmp_seq=1 ttl=63 time=8.00 ms
+1288 bytes from PRIVATE_IP_021: icmp_seq=2 ttl=63 time=8.00 ms
+1288 bytes from PRIVATE_IP_021: icmp_seq=3 ttl=63 time=8.11 ms
+
+--- PRIVATE_IP_021 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 8.000/8.038/8.114/0.053 ms
+
+## size=1320
+PING PRIVATE_IP_021 (PRIVATE_IP_021) 1320(1348) bytes of data.
+1328 bytes from PRIVATE_IP_021: icmp_seq=1 ttl=63 time=7.95 ms
+1328 bytes from PRIVATE_IP_021: icmp_seq=2 ttl=63 time=7.76 ms
+1328 bytes from PRIVATE_IP_021: icmp_seq=3 ttl=63 time=7.86 ms
+
+--- PRIVATE_IP_021 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 7.761/7.856/7.952/0.077 ms
+
+## size=1360
+PING PRIVATE_IP_021 (PRIVATE_IP_021) 1360(1388) bytes of data.
+1368 bytes from PRIVATE_IP_021: icmp_seq=1 ttl=63 time=7.98 ms
+1368 bytes from PRIVATE_IP_021: icmp_seq=2 ttl=63 time=7.91 ms
+1368 bytes from PRIVATE_IP_021: icmp_seq=3 ttl=63 time=8.34 ms
+
+--- PRIVATE_IP_021 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 7.909/8.073/8.336/0.187 ms
+
+## size=1380
+PING PRIVATE_IP_021 (PRIVATE_IP_021) 1380(1408) bytes of data.
+1388 bytes from PRIVATE_IP_021: icmp_seq=1 ttl=63 time=8.09 ms
+1388 bytes from PRIVATE_IP_021: icmp_seq=2 ttl=63 time=7.69 ms
+1388 bytes from PRIVATE_IP_021: icmp_seq=3 ttl=63 time=7.79 ms
+
+--- PRIVATE_IP_021 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 7.688/7.856/8.093/0.172 ms
+
+## size=1400
+PING PRIVATE_IP_021 (PRIVATE_IP_021) 1400(1428) bytes of data.
+1408 bytes from PRIVATE_IP_021: icmp_seq=1 ttl=63 time=8.34 ms
+1408 bytes from PRIVATE_IP_021: icmp_seq=2 ttl=63 time=8.44 ms
+1408 bytes from PRIVATE_IP_021: icmp_seq=3 ttl=63 time=9.28 ms
+
+--- PRIVATE_IP_021 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 8.335/8.682/9.275/0.421 ms
+
+## size=1420
+PING PRIVATE_IP_021 (PRIVATE_IP_021) 1420(1448) bytes of data.
+1428 bytes from PRIVATE_IP_021: icmp_seq=1 ttl=63 time=8.10 ms
+1428 bytes from PRIVATE_IP_021: icmp_seq=2 ttl=63 time=8.36 ms
+1428 bytes from PRIVATE_IP_021: icmp_seq=3 ttl=63 time=8.45 ms
+
+--- PRIVATE_IP_021 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2002ms
+rtt min/avg/max/mdev = 8.101/8.303/8.449/0.147 ms
+
+## size=1440
+PING PRIVATE_IP_021 (PRIVATE_IP_021) 1440(1468) bytes of data.
+1448 bytes from PRIVATE_IP_021: icmp_seq=1 ttl=63 time=8.64 ms
+1448 bytes from PRIVATE_IP_021: icmp_seq=2 ttl=63 time=8.54 ms
+1448 bytes from PRIVATE_IP_021: icmp_seq=3 ttl=63 time=7.95 ms
+
+--- PRIVATE_IP_021 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 7.952/8.374/8.635/0.301 ms
+
+## size=1460
+PING PRIVATE_IP_021 (PRIVATE_IP_021) 1460(1488) bytes of data.
+1468 bytes from PRIVATE_IP_021: icmp_seq=1 ttl=63 time=9.25 ms
+1468 bytes from PRIVATE_IP_021: icmp_seq=2 ttl=63 time=8.53 ms
+1468 bytes from PRIVATE_IP_021: icmp_seq=3 ttl=63 time=8.77 ms
+
+--- PRIVATE_IP_021 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 8.526/8.848/9.245/0.298 ms
+
+## size=1472
+PING PRIVATE_IP_021 (PRIVATE_IP_021) 1472(1500) bytes of data.
+1480 bytes from PRIVATE_IP_021: icmp_seq=1 ttl=63 time=8.85 ms
+1480 bytes from PRIVATE_IP_021: icmp_seq=2 ttl=63 time=8.55 ms
+1480 bytes from PRIVATE_IP_021: icmp_seq=3 ttl=63 time=8.93 ms
+
+--- PRIVATE_IP_021 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 8.545/8.773/8.925/0.164 ms
+

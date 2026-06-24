@@ -1,0 +1,8 @@
+metric,value,unit,notes
+macsec_frame_count,5868,frames,Tramas con eth.type 0x88e5
+macsec_full_frame_bytes,695721,bytes,Trama completa Ethernet MACsec
+macsec_full_frame_entropy,7.681969,bits_per_byte,Incluye MAC destino/origen y EtherType; puede bajar por encabezados repetitivos
+macsec_after_eth_header_bytes,613569,bytes,Bytes despu?s del encabezado Ethernet
+macsec_after_eth_header_entropy,7.844952,bits_per_byte,"Incluye SecTAG, datos protegidos e ICV"
+macsec_after_30_bytes,519681,bytes,Recorte aproximado para reducir encabezados
+macsec_after_30_entropy,7.999654,bits_per_byte,Aproximaci?n m?s cercana al cuerpo protegido

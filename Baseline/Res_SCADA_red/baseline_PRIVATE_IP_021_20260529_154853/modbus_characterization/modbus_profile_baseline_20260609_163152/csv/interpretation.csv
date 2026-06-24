@@ -1,0 +1,6 @@
+área,hallazgo,interpretación,recomendación
+volumen,ADU Modbus detectados: 15467,"Si el SCADA sondea de forma fija, el conteo total tiende a ser constante y dice poco por sí solo.",Usar ventanas temporales y comparar jitter/ciclo de sondeo.
+transacciones,"matched=7733, unmatched=1, excepciones=250",Respuestas faltantes y excepciones son más reveladoras que barras de paquetes.,"Investigar registros con unmatched, excepción o p95 alto."
+latencia,"RTT medio=7.804 ms, p95=21.254 ms","Mide la respuesta Modbus request-response, no solo ping.","Comparar media, mediana, p95 e IC95 entre baseline y VPN."
+ciclo de sondeo,"Sondeo dominante: PRIVATE_IP_017|U1|FC3|addr=0|qty=100, mediana=1000.417 ms",Describe el ritmo real de consulta del SCADA.,"Cambios grandes indican jitter, carga o túnel afectando determinismo."
+perfil de consultas,"Mayor actividad: PLC PRIVATE_IP_017, U1, FC3, addr=0.0, qty=100.0","Resume qué PLC, Unit ID, dirección de referencia y cantidad de registros se consultan.",Usar este perfil para comparar si baseline y VPN conservan el mismo patrón operacional.

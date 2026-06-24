@@ -1,0 +1,7 @@
+# Redacted artifact placeholder
+
+Original path redacted: MACSec/Res_Modbus_Char_SCADA/logs/characterizer_macsec.log
+Original size bytes: 668
+Reason: non-text artifact redacted
+
+The original artifact is not included because it may expose sensitive network, host, packet, credential, or generated dependency data. See SANITIZATION_MANIFEST.csv for the inventory.

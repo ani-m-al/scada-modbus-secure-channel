@@ -1,0 +1,89 @@
+# Snapshot de entorno
+generated_at=2026-06-18T16:17:02+00:00
+hostname=HOST_REDACTED
+kernel=Linux 6.8.0-124-generic x86_64 GNU/Linux
+mode=bridge
+scada_ip=PRIVATE_IP_023
+api_ips=PRIVATE_IP_021
+if_scada=enp2s0
+if_plc=enp1s0
+bridge=br0
+macsec_if=macsec0
+ip_forward=0
+proxy_arp_enp2s0=0
+proxy_arp_enp1s0=0
+bridge_nf_call_iptables=N/D
+
+## ip -br addr
+lo               UNKNOWN        PRIVATE_IP_005/8 ::1/128 
+enp1s0           UP             
+enp2s0           UP             
+wlp3s0           DOWN           
+br0              UP             PRIVATE_IP_024/24 IPV6_ADDR_003 
+
+## ip route
+PRIVATE_IP_008/24 dev br0 proto kernel scope link src PRIVATE_IP_024 
+
+## bridge link
+2: enp1s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master br0 state forwarding priority 32 cost 19 
+3: enp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master br0 state forwarding priority 32 cost 19 
+
+## bridge fdb show br br0
+MAC_ADDR_018 dev enp1s0 master br0 
+MAC_ADDR_043 dev enp1s0 vlan 1 master br0 permanent
+MAC_ADDR_043 dev enp1s0 master br0 permanent
+MAC_ADDR_039 dev enp1s0 self permanent
+MAC_ADDR_026 dev enp1s0 self permanent
+MAC_ADDR_032 dev enp1s0 self permanent
+MAC_ADDR_033 dev enp1s0 self permanent
+MAC_ADDR_034 dev enp1s0 self permanent
+MAC_ADDR_008 dev enp2s0 master br0 
+MAC_ADDR_011 dev enp2s0 master br0 
+MAC_ADDR_010 dev enp2s0 master br0 
+MAC_ADDR_021 dev enp2s0 master br0 
+MAC_ADDR_024 dev enp2s0 master br0 
+MAC_ADDR_023 dev enp2s0 master br0 
+MAC_ADDR_022 dev enp2s0 master br0 
+MAC_ADDR_009 dev enp2s0 master br0 
+MAC_ADDR_025 dev enp2s0 master br0 
+MAC_ADDR_037 dev enp2s0 master br0 
+MAC_ADDR_001 dev enp2s0 master br0 
+MAC_ADDR_004 dev enp2s0 master br0 
+MAC_ADDR_036 dev enp2s0 master br0 
+MAC_ADDR_017 dev enp2s0 master br0 
+MAC_ADDR_014 dev enp2s0 master br0 
+MAC_ADDR_020 dev enp2s0 master br0 
+MAC_ADDR_016 dev enp2s0 master br0 
+MAC_ADDR_019 dev enp2s0 master br0 
+MAC_ADDR_015 dev enp2s0 master br0 
+MAC_ADDR_045 dev enp2s0 master br0 
+MAC_ADDR_005 dev enp2s0 master br0 
+MAC_ADDR_013 dev enp2s0 master br0 
+MAC_ADDR_002 dev enp2s0 master br0 
+MAC_ADDR_007 dev enp2s0 master br0 
+MAC_ADDR_046 dev enp2s0 master br0 
+MAC_ADDR_003 dev enp2s0 master br0 
+MAC_ADDR_035 dev enp2s0 master br0 
+MAC_ADDR_006 dev enp2s0 master br0 
+MAC_ADDR_044 dev enp2s0 vlan 1 master br0 permanent
+MAC_ADDR_044 dev enp2s0 master br0 permanent
+MAC_ADDR_039 dev enp2s0 self permanent
+MAC_ADDR_026 dev enp2s0 self permanent
+MAC_ADDR_032 dev enp2s0 self permanent
+MAC_ADDR_033 dev enp2s0 self permanent
+MAC_ADDR_034 dev enp2s0 self permanent
+MAC_ADDR_039 dev br0 self permanent
+MAC_ADDR_028 dev br0 self permanent
+MAC_ADDR_040 dev br0 self permanent
+MAC_ADDR_026 dev br0 self permanent
+MAC_ADDR_042 dev br0 self permanent
+MAC_ADDR_027 dev br0 self permanent
+MAC_ADDR_029 dev br0 self permanent
+MAC_ADDR_030 dev br0 self permanent
+MAC_ADDR_031 dev br0 self permanent
+MAC_ADDR_047 dev br0 vlan 1 master br0 permanent
+MAC_ADDR_047 dev br0 master br0 permanent
+
+## ip macsec show
+
+## ss -tan sport/dport 502

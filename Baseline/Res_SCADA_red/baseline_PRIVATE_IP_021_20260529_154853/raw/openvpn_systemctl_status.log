@@ -1,0 +1,9 @@
+● openvpn.service - OpenVPN service
+     Loaded: loaded (/usr/lib/systemd/system/openvpn.service; enabled; preset: enabled)
+     Active: active (exited) since Mon 2026-04-06 12:09:44 -05; 1 month 22 days ago
+       Docs: man:openvpn(8)
+   Main PID: 30138 (code=exited, status=0/SUCCESS)
+        CPU: 5ms
+
+Warning: some journal files were not opened due to insufficient permissions.
+[exit_code=0]

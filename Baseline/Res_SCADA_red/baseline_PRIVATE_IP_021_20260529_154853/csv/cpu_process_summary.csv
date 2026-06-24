@@ -1,0 +1,13 @@
+run_id,scenario,target,iface,rank,process,avg_cpu_pct,cumulative_cpu_pct,samples,source_file
+baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,1,node-red,11.522,11.522,501,raw/pidstat_all.log
+baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,2,pidstat,2.985,14.507,501,raw/pidstat_all.log
+baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,3,grafana,2.684,17.191,501,raw/pidstat_all.log
+baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,4,tshark,2.369,19.560,17,raw/pidstat_all.log
+baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,5,wazuh-agentd,2.315,21.875,177,raw/pidstat_all.log
+baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,6,runc,2.000,23.875,3,raw/pidstat_all.log
+baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,7,runc:[2:INIT],2.000,25.875,2,raw/pidstat_all.log
+baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,8,kworker/u22:3-events_power_efficient,2.000,27.875,4,raw/pidstat_all.log
+baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,9,systemd,1.603,29.477,175,raw/pidstat_all.log
+baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,10,postgres,1.507,30.984,1736,raw/pidstat_all.log
+baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,11,kworker/u17:3-flush-252:1,1.500,32.484,2,raw/pidstat_all.log
+baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,12,kworker/u22:1-events_power_efficient,1.500,33.984,2,raw/pidstat_all.log

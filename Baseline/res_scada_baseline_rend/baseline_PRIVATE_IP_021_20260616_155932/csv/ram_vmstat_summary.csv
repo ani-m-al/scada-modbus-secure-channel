@@ -1,0 +1,13 @@
+metric,label,unit,n,min,mean,median,p95,max,std
+swpd_mib,Swap usada,MiB,299,4.035,4.035,4.035,4.035,4.035,0.000
+free_mib,Memoria libre,MiB,299,2245.469,2269.164,2269.332,2282.363,2294.109,8.351
+buff_mib,Buffers,MiB,299,392.840,392.845,392.844,392.855,392.855,0.006
+cache_mib,Cache,MiB,299,19851.871,19856.434,19856.387,19860.524,19860.980,2.657
+available_proxy_mib,Libre + buffers + cache,MiB,299,22496.004,22518.443,22518.812,22530.649,22547.305,8.324
+swap_in_kib_s,Swap in,KiB/s,299,0.000,0.000,0.000,0.000,0.000,0.000
+swap_out_kib_s,Swap out,KiB/s,299,0.000,0.000,0.000,0.000,0.000,0.000
+context_switches_s,Cambios de contexto,cambios/s,299,1836.000,2834.860,2359.000,5173.300,9088.000,1263.691
+used_including_cache_mib,RAM usada incluyendo cache,MiB,299,21737.891,21762.836,21762.668,21776.136,21786.531,8.351
+used_including_cache_pct,RAM usada incluyendo cache,%,299,90.454,90.558,90.557,90.613,90.656,0.035
+used_without_buffer_cache_mib,RAM usada sin buffers/cache,MiB,299,1484.695,1513.557,1513.188,1527.810,1535.996,8.324
+used_without_buffer_cache_pct,RAM usada sin buffers/cache,%,299,6.178,6.298,6.297,6.357,6.391,0.035

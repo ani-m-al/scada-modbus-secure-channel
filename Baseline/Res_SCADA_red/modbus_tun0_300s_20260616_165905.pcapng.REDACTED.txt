@@ -1,0 +1,7 @@
+# Redacted artifact placeholder
+
+Original path redacted: Baseline/Res_SCADA_red/modbus_tun0_300s_20260616_165905.pcapng
+Original size bytes: 2913944
+Reason: raw capture, binary, archive, credential-like, or payload artifact redacted
+
+The original artifact is not included because it may expose sensitive network, host, packet, credential, or generated dependency data. See SANITIZATION_MANIFEST.csv for the inventory.

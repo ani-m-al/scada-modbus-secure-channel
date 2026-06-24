@@ -1,0 +1,5 @@
+function_base,function_name,direction,adu_count,adu_bytes
+3,Read Holding Registers,query,5096,61152
+3,Read Holding Registers,response,5096,644730
+4,Read Input Registers,query,300,3600
+4,Read Input Registers,response,300,20700

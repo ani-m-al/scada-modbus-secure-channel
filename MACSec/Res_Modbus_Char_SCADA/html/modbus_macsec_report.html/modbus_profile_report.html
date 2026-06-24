@@ -1,0 +1,720 @@
+<!doctype html><html lang='es'><head><meta charset='utf-8'><title>Caracterizacion Modbus TCP</title>
+<style>
+body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,h2,h3{color:#102a43}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.kpi{border:1px solid #d9e2ec;border-radius:10px;background:#f8fafc;padding:12px}table{border-collapse:collapse;width:100%;font-size:13px;margin:10px 0 24px}th,td{border:1px solid #d9e2ec;padding:7px;vertical-align:top}th{background:#eef2f7;text-align:left}.badge{display:inline-block;border-radius:999px;padding:3px 8px;font-weight:bold;font-size:12px}.OK,.ok{background:#dcfce7;color:#166534}.WARNING,.warning{background:#fef3c7;color:#92400e}.ERROR,.error{background:#fee2e2;color:#991b1b}.INFO,.info{background:#e5e7eb;color:#374151}.muted{color:#627d98}img{max-width:100%;border:1px solid #d9e2ec;border-radius:10px;margin:8px 0 24px;background:white}code{background:#eef2f7;padding:2px 4px;border-radius:4px}.section{margin-top:28px}
+</style>
+</head><body>
+<h1>Caracterizacion pasiva de Modbus TCP</h1>
+<p>Reporte generado automaticamente para documentar el comportamiento operativo del trafico Modbus observado.</p>
+<div class='grid'><div class='kpi'><b>mode</b><br>pcap</div><div class='kpi'><b>iface</b><br></div><div class='kpi'><b>pcap</b><br>LOCAL_PATH_REDACTED</div><div class='kpi'><b>port</b><br>502</div><div class='kpi'><b>window_sec</b><br>5</div><div class='kpi'><b>packets_read</b><br>5546</div><div class='kpi'><b>tcp_packets</b><br>5546</div><div class='kpi'><b>modbus_adus</b><br>2400</div><div class='kpi'><b>transactions</b><br>1200</div><div class='kpi'><b>matched_tx</b><br>1200</div><div class='kpi'><b>missing_responses</b><br>0</div><div class='kpi'><b>orphan_responses</b><br>0</div><div class='kpi'><b>exceptions</b><br>0</div><div class='kpi'><b>rtt_avg_ms</b><br>7.554</div><div class='kpi'><b>rtt_p95_ms</b><br>10.246</div><div class='kpi'><b>register_profiles</b><br>6</div><div class='kpi'><b>generated_at</b><br>2026-06-18T12:34:39</div></div>
+
+<div class='section'><h2>1. Lectura tecnica</h2><table><thead><tr><th>Seccion</th><th>Item</th><th>Estado</th><th>Evidencia</th><th>Recomendacion</th></tr></thead><tbody><tr><td>Deteccion</td><td>Tramas Modbus</td><td><span class='badge OK'>OK</span></td><td>Se detectaron 2400 ADUs Modbus TCP.</td><td>La captura es valida para caracterizacion semantica del trafico Modbus.</td></tr><tr><td>Transacciones</td><td>Emparejamiento request/response</td><td><span class='badge OK'>OK</span></td><td>1200/1200 transacciones emparejadas (100.00 %).</td><td>Comparar entre baseline y canal seguro. Una caida puede indicar perdida, cierre de sesiones o captura incompleta.</td></tr><tr><td>Transacciones</td><td>Respuestas faltantes</td><td><span class='badge OK'>OK</span></td><td>No se observaron requests sin respuesta emparejada.</td><td></td></tr><tr><td>Modbus</td><td>Excepciones</td><td><span class='badge OK'>OK</span></td><td>No se observaron excepciones Modbus.</td><td></td></tr><tr><td>Latencia</td><td>Peor p95 por servidor/funcion</td><td><span class='badge INFO'>INFO</span></td><td>Servidor PRIVATE_IP_021, Read Holding Registers, p95=10.247 ms.</td><td>Usar este valor como referencia de comportamiento Modbus real, distinto al TCP connect del probe.</td></tr><tr><td>Registros</td><td>Registro mas consultado</td><td><span class='badge INFO'>INFO</span></td><td>fc3:unit1:reg0:qty86:serverPRIVATE_IP_021 con 300 transacciones.</td><td>Sirve para documentar el mapa operativo observado del canal SCADA-API.</td></tr><tr><td>TCP</td><td>Estabilidad TCP</td><td><span class='badge OK'>OK</span></td><td>RST=0, retransmisiones probables=0.</td><td>Valores altos pueden afectar RTT Modbus y continuidad operativa.</td></tr></tbody></table></div>
+
+<div class='section'><h2>2. Funciones Modbus y endpoints</h2>
+<h3>Codigos de funcion</h3><img alt='Codigos de funcion' src='data:image/png;base64,REDACTED_EMBEDDED_IMAGE'/><table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>function_base</th>
+      <th>function_name</th>
+      <th>direction</th>
+      <th>adu_count</th>
+      <th>adu_bytes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>1200</td>
+      <td>14400</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>1200</td>
+      <td>159600</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Pares cliente-servidor</h3><img alt='Endpoints' src='data:image/png;base64,REDACTED_EMBEDDED_IMAGE'/><table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>src_ip</th>
+      <th>dst_ip</th>
+      <th>direction</th>
+      <th>adu_count</th>
+      <th>adu_bytes</th>
+      <th>tcp_payload_bytes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PRIVATE_IP_001</td>
+      <td>PRIVATE_IP_021</td>
+      <td>query</td>
+      <td>1200</td>
+      <td>14400</td>
+      <td>14400</td>
+    </tr>
+    <tr>
+      <td>PRIVATE_IP_021</td>
+      <td>PRIVATE_IP_001</td>
+      <td>response</td>
+      <td>1200</td>
+      <td>159600</td>
+      <td>159600</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class='section'><h2>3. Latencia Modbus real</h2>
+<img alt='Histograma RTT' src='data:image/png;base64,REDACTED_EMBEDDED_IMAGE'/>
+<img alt='RTT en el tiempo' src='data:image/png;base64,REDACTED_EMBEDDED_IMAGE'/>
+<table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>server_ip</th>
+      <th>function_base</th>
+      <th>function_name</th>
+      <th>transactions</th>
+      <th>rtt_min_ms</th>
+      <th>rtt_avg_ms</th>
+      <th>rtt_median_ms</th>
+      <th>rtt_p95_ms</th>
+      <th>rtt_max_ms</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PRIVATE_IP_021</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>1200</td>
+      <td>3.757</td>
+      <td>7.554</td>
+      <td>7.317</td>
+      <td>10.247</td>
+      <td>20.140</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class='section'><h2>4. Registros y ciclos de sondeo</h2>
+<img alt='Registros' src='data:image/png;base64,REDACTED_EMBEDDED_IMAGE'/>
+<table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>server_ip</th>
+      <th>unit_id</th>
+      <th>function_base</th>
+      <th>function_name</th>
+      <th>reference_num</th>
+      <th>quantity</th>
+      <th>register_signature</th>
+      <th>transactions</th>
+      <th>rtt_avg_ms</th>
+      <th>rtt_p95_ms</th>
+      <th>first_seen</th>
+      <th>last_seen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PRIVATE_IP_021</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>0.000</td>
+      <td>86.000</td>
+      <td>fc3:unit1:reg0:qty86:serverPRIVATE_IP_021</td>
+      <td>300</td>
+      <td>7.589</td>
+      <td>9.826</td>
+      <td>1.78e+09</td>
+      <td>1.78e+09</td>
+    </tr>
+    <tr>
+      <td>PRIVATE_IP_021</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>94.000</td>
+      <td>86.000</td>
+      <td>fc3:unit1:reg94:qty86:serverPRIVATE_IP_021</td>
+      <td>300</td>
+      <td>7.384</td>
+      <td>9.593</td>
+      <td>1.78e+09</td>
+      <td>1.78e+09</td>
+    </tr>
+    <tr>
+      <td>PRIVATE_IP_021</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>0.000</td>
+      <td>75.000</td>
+      <td>fc3:unit1:reg0:qty75:serverPRIVATE_IP_021</td>
+      <td>150</td>
+      <td>7.591</td>
+      <td>9.863</td>
+      <td>1.78e+09</td>
+      <td>1.78e+09</td>
+    </tr>
+    <tr>
+      <td>PRIVATE_IP_021</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>3.000</td>
+      <td>1.000</td>
+      <td>fc3:unit1:reg3:qty1:serverPRIVATE_IP_021</td>
+      <td>150</td>
+      <td>7.220</td>
+      <td>10.646</td>
+      <td>1.78e+09</td>
+      <td>1.78e+09</td>
+    </tr>
+    <tr>
+      <td>PRIVATE_IP_021</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>94.000</td>
+      <td>75.000</td>
+      <td>fc3:unit1:reg94:qty75:serverPRIVATE_IP_021</td>
+      <td>150</td>
+      <td>7.727</td>
+      <td>10.250</td>
+      <td>1.78e+09</td>
+      <td>1.78e+09</td>
+    </tr>
+    <tr>
+      <td>PRIVATE_IP_021</td>
+      <td>1</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>97.000</td>
+      <td>1.000</td>
+      <td>fc3:unit1:reg97:qty1:serverPRIVATE_IP_021</td>
+      <td>150</td>
+      <td>7.948</td>
+      <td>11.247</td>
+      <td>1.78e+09</td>
+      <td>1.78e+09</td>
+    </tr>
+  </tbody>
+</table>
+<img alt='Ciclos de sondeo' src='data:image/png;base64,REDACTED_EMBEDDED_IMAGE'/>
+<table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>register_signature</th>
+      <th>samples</th>
+      <th>poll_min_s</th>
+      <th>poll_avg_s</th>
+      <th>poll_median_s</th>
+      <th>poll_p95_s</th>
+      <th>poll_max_s</th>
+      <th>poll_std_s</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>fc3:unit1:reg0:qty86:serverPRIVATE_IP_021</td>
+      <td>299</td>
+      <td>0.994</td>
+      <td>1.000</td>
+      <td>1.000</td>
+      <td>1.004</td>
+      <td>1.009</td>
+      <td>0.002</td>
+    </tr>
+    <tr>
+      <td>fc3:unit1:reg94:qty86:serverPRIVATE_IP_021</td>
+      <td>299</td>
+      <td>0.990</td>
+      <td>1.000</td>
+      <td>1.001</td>
+      <td>1.004</td>
+      <td>1.021</td>
+      <td>0.003</td>
+    </tr>
+    <tr>
+      <td>fc3:unit1:reg0:qty75:serverPRIVATE_IP_021</td>
+      <td>149</td>
+      <td>1.992</td>
+      <td>2.001</td>
+      <td>2.001</td>
+      <td>2.003</td>
+      <td>2.009</td>
+      <td>0.002</td>
+    </tr>
+    <tr>
+      <td>fc3:unit1:reg3:qty1:serverPRIVATE_IP_021</td>
+      <td>149</td>
+      <td>1.986</td>
+      <td>2.001</td>
+      <td>2.000</td>
+      <td>2.006</td>
+      <td>2.016</td>
+      <td>0.003</td>
+    </tr>
+    <tr>
+      <td>fc3:unit1:reg94:qty75:serverPRIVATE_IP_021</td>
+      <td>149</td>
+      <td>1.993</td>
+      <td>2.001</td>
+      <td>2.000</td>
+      <td>2.004</td>
+      <td>2.009</td>
+      <td>0.002</td>
+    </tr>
+    <tr>
+      <td>fc3:unit1:reg97:qty1:serverPRIVATE_IP_021</td>
+      <td>149</td>
+      <td>1.969</td>
+      <td>2.001</td>
+      <td>2.001</td>
+      <td>2.008</td>
+      <td>2.032</td>
+      <td>0.006</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class='section'><h2>5. Carga temporal y estabilidad TCP</h2>
+<img alt='Carga temporal' src='data:image/png;base64,REDACTED_EMBEDDED_IMAGE'/>
+<table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>bucket</th>
+      <th>time_start_s</th>
+      <th>function_base</th>
+      <th>function_name</th>
+      <th>direction</th>
+      <th>adu_count</th>
+      <th>adu_bytes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>21</td>
+      <td>252</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>20</td>
+      <td>2808</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>19</td>
+      <td>228</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>5</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>20</td>
+      <td>2512</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>10</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>20</td>
+      <td>240</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>10</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>19</td>
+      <td>2649</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>15</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>20</td>
+      <td>240</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>15</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>21</td>
+      <td>2671</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>20</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>20</td>
+      <td>240</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>20</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>19</td>
+      <td>2649</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>25</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>20</td>
+      <td>240</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>25</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>21</td>
+      <td>2671</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>30</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>19</td>
+      <td>228</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>30</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>19</td>
+      <td>2649</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>35</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>21</td>
+      <td>252</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>35</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>21</td>
+      <td>2671</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>40</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>19</td>
+      <td>228</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>40</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>19</td>
+      <td>2649</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>45</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>21</td>
+      <td>252</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>45</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>21</td>
+      <td>2671</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>50</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>19</td>
+      <td>228</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>50</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>19</td>
+      <td>2649</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>55</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>21</td>
+      <td>252</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>55</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>21</td>
+      <td>2671</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>60</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>19</td>
+      <td>228</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>60</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>19</td>
+      <td>2649</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>65</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>21</td>
+      <td>252</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>65</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>21</td>
+      <td>2671</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>70</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>19</td>
+      <td>228</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>70</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>19</td>
+      <td>2649</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>75</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>21</td>
+      <td>252</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>75</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>21</td>
+      <td>2671</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>80</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>19</td>
+      <td>228</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>80</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>19</td>
+      <td>2649</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>85</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>21</td>
+      <td>252</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>85</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>21</td>
+      <td>2671</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>90</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>19</td>
+      <td>228</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>90</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>19</td>
+      <td>2649</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>95</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>query</td>
+      <td>21</td>
+      <td>252</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>95</td>
+      <td>3</td>
+      <td>Read Holding Registers</td>
+      <td>response</td>
+      <td>21</td>
+      <td>2671</td>
+    </tr>
+  </tbody>
+</table>
+<h3>Estabilidad TCP</h3><table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>src_ip</th>
+      <th>dst_ip</th>
+      <th>direction</th>
+      <th>packets</th>
+      <th>payload_bytes</th>
+      <th>syn_count</th>
+      <th>fin_count</th>
+      <th>rst_count</th>
+      <th>probable_retransmissions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PRIVATE_IP_001</td>
+      <td>PRIVATE_IP_021</td>
+      <td>query</td>
+      <td>3449</td>
+      <td>14400</td>
+      <td>299</td>
+      <td>302</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>PRIVATE_IP_021</td>
+      <td>PRIVATE_IP_001</td>
+      <td>response</td>
+      <td>2097</td>
+      <td>159600</td>
+      <td>299</td>
+      <td>299</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class='section'><h2>6. Archivos generados</h2>
+<ul>
+<li><code>csv/modbus_adus.csv</code>: ADUs Modbus detectadas.</li>
+<li><code>csv/modbus_transactions.csv</code>: requests/responses emparejados y RTT.</li>
+<li><code>csv/register_activity.csv</code>: registros o rangos mas consultados.</li>
+<li><code>csv/polling_summary.csv</code>: ciclos de sondeo por registro/rango.</li>
+<li><code>csv/function_summary.csv</code>: resumen por codigo de funcion.</li>
+<li><code>csv/endpoint_summary.csv</code>: resumen por par origen-destino.</li>
+<li><code>csv/tcp_stability.csv</code>: SYN/FIN/RST/retransmisiones probables.</li>
+<li><code>csv/run_metadata.csv</code>: metadatos de la corrida.</li>
+</ul>
+</div>
+</body></html>

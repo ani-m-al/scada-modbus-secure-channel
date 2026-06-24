@@ -1,0 +1,3 @@
+metric,value,unit
+payload_bytes,1001914,bytes
+shannon_entropy,1.838334,bits_per_byte

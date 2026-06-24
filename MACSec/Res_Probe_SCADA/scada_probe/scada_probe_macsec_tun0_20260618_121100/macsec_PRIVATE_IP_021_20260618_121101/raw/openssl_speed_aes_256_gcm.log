@@ -1,0 +1,15 @@
+Doing AES-256-GCM for 3s on 16 size blocks: 57385366 AES-256-GCM's in 2.99s
+Doing AES-256-GCM for 3s on 64 size blocks: 37146054 AES-256-GCM's in 3.00s
+Doing AES-256-GCM for 3s on 256 size blocks: 18615713 AES-256-GCM's in 3.00s
+Doing AES-256-GCM for 3s on 1024 size blocks: 7342309 AES-256-GCM's in 2.99s
+Doing AES-256-GCM for 3s on 8192 size blocks: 1090202 AES-256-GCM's in 3.00s
+Doing AES-256-GCM for 3s on 16384 size blocks: 565322 AES-256-GCM's in 3.00s
+version: 3.0.13
+built on: Tue Jun  2 19:33:25 2026 UTC
+options: bn(64,64)
+compiler: gcc -fPIC -pthread -m64 -Wa,--noexecstack -Wall -fzero-call-used-regs=used-gpr -DOPENSSL_TLS_SECURITY_LEVEL=2 -Wa,--noexecstack -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/openssl-gza1f8/openssl-3.0.13=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=/build/openssl-gza1f8/openssl-3.0.13=/usr/src/openssl-3.0.13-0ubuntu3.11 -DOPENSSL_USE_NODELETE -DL_ENDIAN -DOPENSSL_PIC -DOPENSSL_BUILDING_OPENSSL -DNDEBUG -Wdate-time -D_FORTIFY_SOURCE=3
+CPUINFO: OPENSSL_ia32cap=0xfffa32034f8bffff:0x18d19e27eb
+The 'numbers' are in 1000s of bytes per second processed.
+type             16 bytes     64 bytes    256 bytes   1024 bytes   8192 bytes  16384 bytes
+AES-256-GCM     307078.88k   792449.15k  1588540.84k  2514556.66k  2976978.26k  3087411.88k
+[exit_code=0]

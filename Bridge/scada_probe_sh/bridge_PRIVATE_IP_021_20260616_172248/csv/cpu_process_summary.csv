@@ -1,0 +1,13 @@
+run_id,scenario,target,iface,rank,process,avg_cpu_pct,cumulative_cpu_pct,samples,source_file
+bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,1,node-red,34.984,34.984,301,raw/pidstat_all.log
+bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,2,postgres,6.723,41.707,1057,raw/pidstat_all.log
+bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,3,tshark,3.137,44.844,11,raw/pidstat_all.log
+bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,4,pidstat,2.846,47.690,301,raw/pidstat_all.log
+bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,5,kcompactd0,2.809,50.499,10,raw/pidstat_all.log
+bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,6,grafana,2.631,53.130,300,raw/pidstat_all.log
+bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,7,wazuh-agentd,2.454,55.584,92,raw/pidstat_all.log
+bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,8,kworker/u24:0-events_power_efficient,2.000,57.584,1,raw/pidstat_all.log
+bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,9,systemd,1.516,59.100,117,raw/pidstat_all.log
+bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,10,openvpn,1.450,60.551,276,raw/pidstat_all.log
+bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,11,redis-server,1.434,61.985,298,raw/pidstat_all.log
+bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,12,dockerd,1.378,63.363,99,raw/pidstat_all.log

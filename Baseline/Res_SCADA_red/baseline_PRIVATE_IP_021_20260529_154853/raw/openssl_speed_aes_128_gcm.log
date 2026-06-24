@@ -1,0 +1,15 @@
+Doing AES-128-GCM for 3s on 16 size blocks: 67879453 AES-128-GCM's in 3.00s
+Doing AES-128-GCM for 3s on 64 size blocks: 40478175 AES-128-GCM's in 2.99s
+Doing AES-128-GCM for 3s on 256 size blocks: 22045688 AES-128-GCM's in 3.00s
+Doing AES-128-GCM for 3s on 1024 size blocks: 9229472 AES-128-GCM's in 3.00s
+Doing AES-128-GCM for 3s on 8192 size blocks: 1524484 AES-128-GCM's in 3.00s
+Doing AES-128-GCM for 3s on 16384 size blocks: 757127 AES-128-GCM's in 2.99s
+version: 3.0.13
+built on: Tue Apr  7 12:05:56 2026 UTC
+options: bn(64,64)
+compiler: gcc -fPIC -pthread -m64 -Wa,--noexecstack -Wall -fzero-call-used-regs=used-gpr -DOPENSSL_TLS_SECURITY_LEVEL=2 -Wa,--noexecstack -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/openssl-a6Kur2/openssl-3.0.13=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fdebug-prefix-map=/build/openssl-a6Kur2/openssl-3.0.13=/usr/src/openssl-3.0.13-0ubuntu3.9 -DOPENSSL_USE_NODELETE -DL_ENDIAN -DOPENSSL_PIC -DOPENSSL_BUILDING_OPENSSL -DNDEBUG -Wdate-time -D_FORTIFY_SOURCE=3
+CPUINFO: OPENSSL_ia32cap=0xfffa32034f8bffff:0x18d19e27eb
+The 'numbers' are in 1000s of bytes per second processed.
+type             16 bytes     64 bytes    256 bytes   1024 bytes   8192 bytes  16384 bytes
+AES-128-GCM     362023.75k   866422.47k  1881232.04k  3150326.44k  4162857.64k  4148752.10k
+[exit_code=0]

@@ -1,0 +1,1 @@
+/mnt/cLOCAL_PATH_REDACTED Estatal/10mo Ciclo/Tesis Décimo/Res_SCADA/baseline_PRIVATE_IP_021_20260529_154853/pcap/baseline_PRIVATE_IP_021_502_tun0.pcapng

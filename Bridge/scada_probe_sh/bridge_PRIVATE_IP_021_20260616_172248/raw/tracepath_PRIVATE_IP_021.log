@@ -1,0 +1,6 @@
+ 1?: [LOCALHOST]                      pmtu 1500
+ 1:  PRIVATE_IP_002                                              1.963ms 
+ 1:  PRIVATE_IP_002                                              1.926ms 
+ 2:  PRIVATE_IP_021                                        7.087ms reached
+     Resume: pmtu 1500 hops 2 back 2 
+[exit_code=0]

@@ -1,0 +1,86 @@
+# Snapshot de entorno
+generated_at=2026-06-18T16:52:59+00:00
+hostname=HOST_REDACTED
+kernel=Linux 6.8.0-124-generic x86_64 GNU/Linux
+mode=macsec
+scada_ip=PRIVATE_IP_023
+api_ips=PRIVATE_IP_021
+if_scada=enp2s0
+if_plc=enp1s0
+bridge=br0
+macsec_if=macsec0
+ip_forward=0
+proxy_arp_enp2s0=0
+proxy_arp_enp1s0=0
+bridge_nf_call_iptables=N/D
+
+## ip -br addr
+lo               UNKNOWN        PRIVATE_IP_005/8 ::1/128 
+enp1s0           UP             
+enp2s0           UP             
+wlp3s0           DOWN           
+br0              UP             PRIVATE_IP_024/24 IPV6_ADDR_003 
+macsec0@enp2s0   UP             IPV6_ADDR_002 
+
+## ip route
+PRIVATE_IP_008/24 dev br0 proto kernel scope link src PRIVATE_IP_024 
+
+## bridge link
+2: enp1s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 master br0 state forwarding priority 32 cost 19 
+15: macsec0@enp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1468 master br0 state forwarding priority 32 cost 100 
+
+## bridge fdb show br br0
+MAC_ADDR_018 dev enp1s0 master br0 
+MAC_ADDR_043 dev enp1s0 vlan 1 master br0 permanent
+MAC_ADDR_043 dev enp1s0 master br0 permanent
+MAC_ADDR_039 dev enp1s0 self permanent
+MAC_ADDR_026 dev enp1s0 self permanent
+MAC_ADDR_032 dev enp1s0 self permanent
+MAC_ADDR_033 dev enp1s0 self permanent
+MAC_ADDR_034 dev enp1s0 self permanent
+MAC_ADDR_039 dev br0 self permanent
+MAC_ADDR_028 dev br0 self permanent
+MAC_ADDR_040 dev br0 self permanent
+MAC_ADDR_026 dev br0 self permanent
+MAC_ADDR_042 dev br0 self permanent
+MAC_ADDR_047 dev br0 vlan 1 master br0 permanent
+MAC_ADDR_047 dev br0 master br0 permanent
+MAC_ADDR_022 dev macsec0 master br0 
+MAC_ADDR_036 dev macsec0 master br0 
+MAC_ADDR_009 dev macsec0 master br0 
+MAC_ADDR_004 dev macsec0 master br0 
+MAC_ADDR_001 dev macsec0 master br0 
+MAC_ADDR_038 dev macsec0 master br0 
+MAC_ADDR_012 dev macsec0 master br0 
+MAC_ADDR_015 dev macsec0 master br0 
+MAC_ADDR_019 dev macsec0 master br0 
+MAC_ADDR_017 dev macsec0 master br0 
+MAC_ADDR_016 dev macsec0 master br0 
+MAC_ADDR_014 dev macsec0 master br0 
+MAC_ADDR_020 dev macsec0 master br0 
+MAC_ADDR_045 dev macsec0 master br0 
+MAC_ADDR_035 dev macsec0 master br0 
+MAC_ADDR_002 dev macsec0 master br0 
+MAC_ADDR_013 dev macsec0 master br0 
+MAC_ADDR_003 dev macsec0 master br0 
+MAC_ADDR_037 dev macsec0 master br0 
+MAC_ADDR_007 dev macsec0 master br0 
+MAC_ADDR_005 dev macsec0 master br0 
+MAC_ADDR_046 dev macsec0 master br0 
+MAC_ADDR_006 dev macsec0 master br0 
+MAC_ADDR_044 dev macsec0 vlan 1 master br0 permanent
+MAC_ADDR_044 dev macsec0 master br0 permanent
+MAC_ADDR_039 dev macsec0 self permanent
+MAC_ADDR_026 dev macsec0 self permanent
+MAC_ADDR_041 dev macsec0 self permanent
+
+## ip macsec show
+15: macsec0: protect on validate check sc off sa off encrypt on send_sci on end_station off scb off replay off 
+    cipher suite: GCM-AES-128, using ICV length 16
+    TXSC: SCI_REDACTED on SA 0
+        0: PN 1305, state on, key 01000000000000000000000000000000
+    RXSC: 000c29655ea90001, state on
+        0: PN 1477, state on, key 01000000000000000000000000000000
+    offload: off 
+
+## ss -tan sport/dport 502

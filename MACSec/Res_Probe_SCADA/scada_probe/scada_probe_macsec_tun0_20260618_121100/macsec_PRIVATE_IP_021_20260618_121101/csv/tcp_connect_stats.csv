@@ -1,0 +1,9 @@
+metric,value,unit
+tcp_connect_success_rate,100.000000,%
+tcp_connect_samples,300,samples
+tcp_connect_min,3.229114,ms
+tcp_connect_avg,4.528330,ms
+tcp_connect_median,4.670663,ms
+tcp_connect_p95,5.158371,ms
+tcp_connect_p99,5.917666,ms
+tcp_connect_max,6.523789,ms

@@ -1,0 +1,4 @@
+tcpdump: listening on br0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+21688 packets captured
+21727 packets received by filter
+0 packets dropped by kernel
