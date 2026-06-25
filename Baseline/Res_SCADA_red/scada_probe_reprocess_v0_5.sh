@@ -16,7 +16,7 @@ Uso:
   ./scada_probe_reprocess_v0_5.sh /ruta/a/carpeta_de_corrida
 
 Ejemplo WSL:
-  ./scada_probe_reprocess_v0_5.sh "/mnt/cLOCAL_PATH_REDACTED Estatal/10mo Ciclo/Tesis Décimo/Res_SCADA/baseline_PRIVATE_IP_021_20260529_154853"
+  ./scada_probe_reprocess_v0_5.sh "/mnt/cLOCAL_PATH_REDACTED Estatal/10mo Ciclo/Tesis Décimo/Res_SCADA/baseline_PRIVATE_IP_022_20260529_154853"
 
 La carpeta debe contener, idealmente:
   metadata.txt

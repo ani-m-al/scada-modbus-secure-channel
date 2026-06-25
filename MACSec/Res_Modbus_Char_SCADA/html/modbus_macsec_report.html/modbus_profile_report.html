@@ -7,7 +7,7 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
 <p>Reporte generado automaticamente para documentar el comportamiento operativo del trafico Modbus observado.</p>
 <div class='grid'><div class='kpi'><b>mode</b><br>pcap</div><div class='kpi'><b>iface</b><br></div><div class='kpi'><b>pcap</b><br>LOCAL_PATH_REDACTED</div><div class='kpi'><b>port</b><br>502</div><div class='kpi'><b>window_sec</b><br>5</div><div class='kpi'><b>packets_read</b><br>5546</div><div class='kpi'><b>tcp_packets</b><br>5546</div><div class='kpi'><b>modbus_adus</b><br>2400</div><div class='kpi'><b>transactions</b><br>1200</div><div class='kpi'><b>matched_tx</b><br>1200</div><div class='kpi'><b>missing_responses</b><br>0</div><div class='kpi'><b>orphan_responses</b><br>0</div><div class='kpi'><b>exceptions</b><br>0</div><div class='kpi'><b>rtt_avg_ms</b><br>7.554</div><div class='kpi'><b>rtt_p95_ms</b><br>10.246</div><div class='kpi'><b>register_profiles</b><br>6</div><div class='kpi'><b>generated_at</b><br>2026-06-18T12:34:39</div></div>
 
-<div class='section'><h2>1. Lectura tecnica</h2><table><thead><tr><th>Seccion</th><th>Item</th><th>Estado</th><th>Evidencia</th><th>Recomendacion</th></tr></thead><tbody><tr><td>Deteccion</td><td>Tramas Modbus</td><td><span class='badge OK'>OK</span></td><td>Se detectaron 2400 ADUs Modbus TCP.</td><td>La captura es valida para caracterizacion semantica del trafico Modbus.</td></tr><tr><td>Transacciones</td><td>Emparejamiento request/response</td><td><span class='badge OK'>OK</span></td><td>1200/1200 transacciones emparejadas (100.00 %).</td><td>Comparar entre baseline y canal seguro. Una caida puede indicar perdida, cierre de sesiones o captura incompleta.</td></tr><tr><td>Transacciones</td><td>Respuestas faltantes</td><td><span class='badge OK'>OK</span></td><td>No se observaron requests sin respuesta emparejada.</td><td></td></tr><tr><td>Modbus</td><td>Excepciones</td><td><span class='badge OK'>OK</span></td><td>No se observaron excepciones Modbus.</td><td></td></tr><tr><td>Latencia</td><td>Peor p95 por servidor/funcion</td><td><span class='badge INFO'>INFO</span></td><td>Servidor PRIVATE_IP_021, Read Holding Registers, p95=10.247 ms.</td><td>Usar este valor como referencia de comportamiento Modbus real, distinto al TCP connect del probe.</td></tr><tr><td>Registros</td><td>Registro mas consultado</td><td><span class='badge INFO'>INFO</span></td><td>fc3:unit1:reg0:qty86:serverPRIVATE_IP_021 con 300 transacciones.</td><td>Sirve para documentar el mapa operativo observado del canal SCADA-API.</td></tr><tr><td>TCP</td><td>Estabilidad TCP</td><td><span class='badge OK'>OK</span></td><td>RST=0, retransmisiones probables=0.</td><td>Valores altos pueden afectar RTT Modbus y continuidad operativa.</td></tr></tbody></table></div>
+<div class='section'><h2>1. Lectura tecnica</h2><table><thead><tr><th>Seccion</th><th>Item</th><th>Estado</th><th>Evidencia</th><th>Recomendacion</th></tr></thead><tbody><tr><td>Deteccion</td><td>Tramas Modbus</td><td><span class='badge OK'>OK</span></td><td>Se detectaron 2400 ADUs Modbus TCP.</td><td>La captura es valida para caracterizacion semantica del trafico Modbus.</td></tr><tr><td>Transacciones</td><td>Emparejamiento request/response</td><td><span class='badge OK'>OK</span></td><td>1200/1200 transacciones emparejadas (100.00 %).</td><td>Comparar entre baseline y canal seguro. Una caida puede indicar perdida, cierre de sesiones o captura incompleta.</td></tr><tr><td>Transacciones</td><td>Respuestas faltantes</td><td><span class='badge OK'>OK</span></td><td>No se observaron requests sin respuesta emparejada.</td><td></td></tr><tr><td>Modbus</td><td>Excepciones</td><td><span class='badge OK'>OK</span></td><td>No se observaron excepciones Modbus.</td><td></td></tr><tr><td>Latencia</td><td>Peor p95 por servidor/funcion</td><td><span class='badge INFO'>INFO</span></td><td>Servidor PRIVATE_IP_022, Read Holding Registers, p95=10.247 ms.</td><td>Usar este valor como referencia de comportamiento Modbus real, distinto al TCP connect del probe.</td></tr><tr><td>Registros</td><td>Registro mas consultado</td><td><span class='badge INFO'>INFO</span></td><td>fc3:unit1:reg0:qty86:serverPRIVATE_IP_022 con 300 transacciones.</td><td>Sirve para documentar el mapa operativo observado del canal SCADA-API.</td></tr><tr><td>TCP</td><td>Estabilidad TCP</td><td><span class='badge OK'>OK</span></td><td>RST=0, retransmisiones probables=0.</td><td>Valores altos pueden afectar RTT Modbus y continuidad operativa.</td></tr></tbody></table></div>
 
 <div class='section'><h2>2. Funciones Modbus y endpoints</h2>
 <h3>Codigos de funcion</h3><img alt='Codigos de funcion' src='data:image/png;base64,REDACTED_EMBEDDED_IMAGE'/><table border="1" class="dataframe data-table">
@@ -51,14 +51,14 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
   <tbody>
     <tr>
       <td>PRIVATE_IP_001</td>
-      <td>PRIVATE_IP_021</td>
+      <td>PRIVATE_IP_022</td>
       <td>query</td>
       <td>1200</td>
       <td>14400</td>
       <td>14400</td>
     </tr>
     <tr>
-      <td>PRIVATE_IP_021</td>
+      <td>PRIVATE_IP_022</td>
       <td>PRIVATE_IP_001</td>
       <td>response</td>
       <td>1200</td>
@@ -88,7 +88,7 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
   </thead>
   <tbody>
     <tr>
-      <td>PRIVATE_IP_021</td>
+      <td>PRIVATE_IP_022</td>
       <td>3</td>
       <td>Read Holding Registers</td>
       <td>1200</td>
@@ -123,13 +123,13 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
   </thead>
   <tbody>
     <tr>
-      <td>PRIVATE_IP_021</td>
+      <td>PRIVATE_IP_022</td>
       <td>1</td>
       <td>3</td>
       <td>Read Holding Registers</td>
       <td>0.000</td>
       <td>86.000</td>
-      <td>fc3:unit1:reg0:qty86:serverPRIVATE_IP_021</td>
+      <td>fc3:unit1:reg0:qty86:serverPRIVATE_IP_022</td>
       <td>300</td>
       <td>7.589</td>
       <td>9.826</td>
@@ -137,13 +137,13 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
       <td>1.78e+09</td>
     </tr>
     <tr>
-      <td>PRIVATE_IP_021</td>
+      <td>PRIVATE_IP_022</td>
       <td>1</td>
       <td>3</td>
       <td>Read Holding Registers</td>
       <td>94.000</td>
       <td>86.000</td>
-      <td>fc3:unit1:reg94:qty86:serverPRIVATE_IP_021</td>
+      <td>fc3:unit1:reg94:qty86:serverPRIVATE_IP_022</td>
       <td>300</td>
       <td>7.384</td>
       <td>9.593</td>
@@ -151,13 +151,13 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
       <td>1.78e+09</td>
     </tr>
     <tr>
-      <td>PRIVATE_IP_021</td>
+      <td>PRIVATE_IP_022</td>
       <td>1</td>
       <td>3</td>
       <td>Read Holding Registers</td>
       <td>0.000</td>
       <td>75.000</td>
-      <td>fc3:unit1:reg0:qty75:serverPRIVATE_IP_021</td>
+      <td>fc3:unit1:reg0:qty75:serverPRIVATE_IP_022</td>
       <td>150</td>
       <td>7.591</td>
       <td>9.863</td>
@@ -165,13 +165,13 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
       <td>1.78e+09</td>
     </tr>
     <tr>
-      <td>PRIVATE_IP_021</td>
+      <td>PRIVATE_IP_022</td>
       <td>1</td>
       <td>3</td>
       <td>Read Holding Registers</td>
       <td>3.000</td>
       <td>1.000</td>
-      <td>fc3:unit1:reg3:qty1:serverPRIVATE_IP_021</td>
+      <td>fc3:unit1:reg3:qty1:serverPRIVATE_IP_022</td>
       <td>150</td>
       <td>7.220</td>
       <td>10.646</td>
@@ -179,13 +179,13 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
       <td>1.78e+09</td>
     </tr>
     <tr>
-      <td>PRIVATE_IP_021</td>
+      <td>PRIVATE_IP_022</td>
       <td>1</td>
       <td>3</td>
       <td>Read Holding Registers</td>
       <td>94.000</td>
       <td>75.000</td>
-      <td>fc3:unit1:reg94:qty75:serverPRIVATE_IP_021</td>
+      <td>fc3:unit1:reg94:qty75:serverPRIVATE_IP_022</td>
       <td>150</td>
       <td>7.727</td>
       <td>10.250</td>
@@ -193,13 +193,13 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
       <td>1.78e+09</td>
     </tr>
     <tr>
-      <td>PRIVATE_IP_021</td>
+      <td>PRIVATE_IP_022</td>
       <td>1</td>
       <td>3</td>
       <td>Read Holding Registers</td>
       <td>97.000</td>
       <td>1.000</td>
-      <td>fc3:unit1:reg97:qty1:serverPRIVATE_IP_021</td>
+      <td>fc3:unit1:reg97:qty1:serverPRIVATE_IP_022</td>
       <td>150</td>
       <td>7.948</td>
       <td>11.247</td>
@@ -224,7 +224,7 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
   </thead>
   <tbody>
     <tr>
-      <td>fc3:unit1:reg0:qty86:serverPRIVATE_IP_021</td>
+      <td>fc3:unit1:reg0:qty86:serverPRIVATE_IP_022</td>
       <td>299</td>
       <td>0.994</td>
       <td>1.000</td>
@@ -234,7 +234,7 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
       <td>0.002</td>
     </tr>
     <tr>
-      <td>fc3:unit1:reg94:qty86:serverPRIVATE_IP_021</td>
+      <td>fc3:unit1:reg94:qty86:serverPRIVATE_IP_022</td>
       <td>299</td>
       <td>0.990</td>
       <td>1.000</td>
@@ -244,7 +244,7 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
       <td>0.003</td>
     </tr>
     <tr>
-      <td>fc3:unit1:reg0:qty75:serverPRIVATE_IP_021</td>
+      <td>fc3:unit1:reg0:qty75:serverPRIVATE_IP_022</td>
       <td>149</td>
       <td>1.992</td>
       <td>2.001</td>
@@ -254,7 +254,7 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
       <td>0.002</td>
     </tr>
     <tr>
-      <td>fc3:unit1:reg3:qty1:serverPRIVATE_IP_021</td>
+      <td>fc3:unit1:reg3:qty1:serverPRIVATE_IP_022</td>
       <td>149</td>
       <td>1.986</td>
       <td>2.001</td>
@@ -264,7 +264,7 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
       <td>0.003</td>
     </tr>
     <tr>
-      <td>fc3:unit1:reg94:qty75:serverPRIVATE_IP_021</td>
+      <td>fc3:unit1:reg94:qty75:serverPRIVATE_IP_022</td>
       <td>149</td>
       <td>1.993</td>
       <td>2.001</td>
@@ -274,7 +274,7 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
       <td>0.002</td>
     </tr>
     <tr>
-      <td>fc3:unit1:reg97:qty1:serverPRIVATE_IP_021</td>
+      <td>fc3:unit1:reg97:qty1:serverPRIVATE_IP_022</td>
       <td>149</td>
       <td>1.969</td>
       <td>2.001</td>
@@ -681,7 +681,7 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
   <tbody>
     <tr>
       <td>PRIVATE_IP_001</td>
-      <td>PRIVATE_IP_021</td>
+      <td>PRIVATE_IP_022</td>
       <td>query</td>
       <td>3449</td>
       <td>14400</td>
@@ -691,7 +691,7 @@ body{font-family:Arial,sans-serif;margin:32px;color:#1f2933;line-height:1.45}h1,
       <td>0</td>
     </tr>
     <tr>
-      <td>PRIVATE_IP_021</td>
+      <td>PRIVATE_IP_022</td>
       <td>PRIVATE_IP_001</td>
       <td>response</td>
       <td>2097</td>

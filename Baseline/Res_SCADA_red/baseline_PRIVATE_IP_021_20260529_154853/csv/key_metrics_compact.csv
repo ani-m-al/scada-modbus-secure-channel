@@ -1,17 +1,0 @@
-run_id,scenario,target,iface,metric,label,value,unit,source_file,notes
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,icmp_packet_loss,Perdida ICMP,0,%,raw/ping_PRIVATE_IP_021.log,
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,icmp_rtt_avg,RTT ICMP promedio,2.804,ms,raw/ping_PRIVATE_IP_021.log,
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,icmp_rtt_mdev,Variacion ICMP,0.459,ms,raw/ping_PRIVATE_IP_021.log,Proxy simple de jitter ICMP.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,tcp_connect_success_rate,Exito TCP connect,100.000000,%,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,tcp_connect_avg,TCP connect promedio,3.770248,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,tcp_connect_p95,TCP connect p95,4.274947,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,tcp_connect_p99,TCP connect p99,4.843308,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,pmtu_ipv4_approx,PMTU IPv4 aproximada,1500,bytes,raw/pmtu_ping_M_do.log,Aproximacion IPv4: payload + 28 bytes.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,payload_entropy,Entropia de payload,1.838334,bits_per_byte,csv/payload_entropy.csv,Calculada sobre tcp.payload del puerto especificado en la interfaz capturada.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,cpu_avg_busy_pct,CPU ocupada promedio,5.100,%,raw/sar_cpu.log,Calculado como 100 - %idle promedio.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,net_rx_kBps,Recepcion promedio,2.235,kB/s,raw/sar_net_dev.log,Promedio sar -n DEV para tun0.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,net_tx_kBps,Transmision promedio,1.795,kB/s,raw/sar_net_dev.log,Promedio sar -n DEV para tun0.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,net_rxpck_s,net_rxpck_s,25.530,packets/s,raw/sar_net_dev.log,Promedio sar -n DEV para tun0.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,net_txpck_s,net_txpck_s,34.750,packets/s,raw/sar_net_dev.log,Promedio sar -n DEV para tun0.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,interface_tx_packets_delta,Paquetes TX interfaz,0.000,packets,raw/ip_s_link_before.log;raw/ip_s_link_after.log,Delta TX en tun0.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,interface_rx_packets_delta,Paquetes RX interfaz,0.000,packets,raw/ip_s_link_before.log;raw/ip_s_link_after.log,Delta RX en tun0.

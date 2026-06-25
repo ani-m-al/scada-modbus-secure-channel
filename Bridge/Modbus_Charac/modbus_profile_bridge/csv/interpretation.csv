@@ -3,6 +3,6 @@ Deteccion,Tramas Modbus,OK,Se detectaron 10788 ADUs Modbus TCP.,La captura es va
 Transacciones,Emparejamiento request/response,OK,5390/5398 transacciones emparejadas (99.85 %).,"Comparar entre baseline y canal seguro. Una caida puede indicar perdida, cierre de sesiones o captura incompleta."
 Transacciones,Respuestas faltantes,WARNING,Se observaron 8 requests sin respuesta emparejada.,"Revisar timeout de captura, errores TCP, saturacion o paquetes fuera de la ventana capturada."
 Modbus,Excepciones,WARNING,Se observaron 150 respuestas de excepcion Modbus.,Identificar exception_code y revisar si corresponde a operacion normal o error de direccion/funcion.
-Latencia,Peor p95 por servidor/funcion,INFO,"Servidor PRIVATE_IP_016, Read Holding Registers, p95=109.285 ms.","Usar este valor como referencia de comportamiento Modbus real, distinto al TCP connect del probe."
-Registros,Registro mas consultado,INFO,fc3:unit1:reg0:qty100:serverPRIVATE_IP_017 con 301 transacciones.,Sirve para documentar el mapa operativo observado del canal SCADA-API.
+Latencia,Peor p95 por servidor/funcion,INFO,"Servidor PRIVATE_IP_017, Read Holding Registers, p95=109.285 ms.","Usar este valor como referencia de comportamiento Modbus real, distinto al TCP connect del probe."
+Registros,Registro mas consultado,INFO,fc3:unit1:reg0:qty100:serverPRIVATE_IP_018 con 301 transacciones.,Sirve para documentar el mapa operativo observado del canal SCADA-API.
 TCP,Estabilidad TCP,WARNING,"RST=75, retransmisiones probables=8.",Valores altos pueden afectar RTT Modbus y continuidad operativa.

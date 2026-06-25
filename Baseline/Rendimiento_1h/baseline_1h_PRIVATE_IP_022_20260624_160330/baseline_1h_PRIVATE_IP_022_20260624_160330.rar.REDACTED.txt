@@ -1,0 +1,7 @@
+# Redacted artifact placeholder
+
+Original path redacted: Baseline/Rendimiento_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/baseline_1h_PRIVATE_IP_022_20260624_160330.rar
+Original size bytes: 3326225
+Reason: raw capture, binary, archive, credential-like, or payload artifact redacted
+
+The original artifact is not included because it may expose sensitive network, host, packet, credential, or generated dependency data. See SANITIZATION_MANIFEST.csv for the inventory.

@@ -1,0 +1,18 @@
+scenario,metric,value,unit,source_file,notes
+macsec,pmtu_payload_max_success,1440,bytes_icmp_payload,raw/pmtu_ping_M_do.log,Mayor payload ICMP exitoso en lista fija.
+macsec,pmtu_ipv4_approx,1468,bytes,raw/pmtu_ping_M_do.log,Aproximacion IPv4: payload + 28 bytes.
+macsec,payload_entropy,2.180193,bits_per_byte,csv/payload_entropy.csv,Calculada sobre tcp.payload del puerto especificado en la interfaz capturada.
+macsec,payload_bytes_for_entropy,728614,bytes,csv/payload_entropy.csv,Cantidad de bytes usados para entropia.
+macsec,icmp_packet_loss,0,%,raw/ping_PRIVATE_IP_022.log,
+macsec,icmp_rtt_min,2.106,ms,raw/ping_PRIVATE_IP_022.log,
+macsec,icmp_rtt_avg,3.662,ms,raw/ping_PRIVATE_IP_022.log,
+macsec,icmp_rtt_max,14.678,ms,raw/ping_PRIVATE_IP_022.log,
+macsec,icmp_rtt_mdev,0.578,ms,raw/ping_PRIVATE_IP_022.log,Proxy simple de jitter ICMP.
+macsec,tcp_connect_success_rate,100.000000,%,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+macsec,tcp_connect_samples,300,samples,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+macsec,tcp_connect_min,3.229114,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+macsec,tcp_connect_avg,4.528330,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+macsec,tcp_connect_median,4.670663,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+macsec,tcp_connect_p95,5.158371,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+macsec,tcp_connect_p99,5.917666,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+macsec,tcp_connect_max,6.523789,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.

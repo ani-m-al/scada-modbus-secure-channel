@@ -1,15 +1,15 @@
 {
-  "generated_at_utc": "2026-06-24T17:56:21.704311+00:00",
+  "generated_at_utc": "2026-06-25T14:07:52.003760+00:00",
   "source_root": "LOCAL_PATH_REDACTED",
   "destination_root": "public_sanitized",
-  "source_file_count": 7278,
+  "source_file_count": 7426,
   "actions": {
-    "sanitized_text": 287,
+    "sanitized_text": 426,
+    "placeholder": 39,
     "sanitized_image": 31,
-    "placeholder": 30,
     "omitted_generated_dependency_tree": 6930
   },
-  "redacted_private_ipv4_count": 25,
+  "redacted_private_ipv4_count": 26,
   "redacted_mac_count": 47,
   "redacted_ipv6_count": 3,
   "pillow_available": true

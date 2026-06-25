@@ -1,3 +1,0 @@
-run_id,scenario,target,iface,service,n,min_ms,q1_ms,median_ms,mean_ms,q3_ms,p95_ms,p99_ms,max_ms,std_ms,ci95_low_ms,ci95_high_ms,source_file
-bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,ICMP,1500,2.060,3.370,3.580,3.620,3.780,4.520,5.520,11.800,0.556,3.592,3.649,raw/ping_PRIVATE_IP_021.log
-bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,TCP_CONNECT,300,3.200,3.885,4.452,4.395,4.765,5.202,6.349,7.106,0.620,4.325,4.465,csv/tcp_connect_PRIVATE_IP_021_502.csv

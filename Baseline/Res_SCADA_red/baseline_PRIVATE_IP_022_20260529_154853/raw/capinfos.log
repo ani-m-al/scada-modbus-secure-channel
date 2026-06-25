@@ -1,0 +1,34 @@
+File name:           ./scada_vpn_probe_results/baseline_PRIVATE_IP_022_20260529_154853/pcap/baseline_PRIVATE_IP_022_502_tun0.pcapng
+File type:           Wireshark/... - pcapng
+File encapsulation:  Raw IP
+File timestamp precision:  nanoseconds (9)
+Packet size limit:   file hdr: (not set)
+Number of packets:   55 k
+File size:           5.674 kB
+Data size:           3.871 kB
+Capture duration:    498,888809645 seconds
+First packet time:   2026-05-29 15:48:55,747802835
+Last packet time:    2026-05-29 15:57:14,636612480
+Data byte rate:      7.759 bytes/s
+Data bit rate:       62 kbps
+Average packet size: 69,44 bytes
+Average packet rate: 111 packets/s
+SHA256:              REDACTED_LONG_HEX
+SHA1:                b49e230c44e028962cdbd906a8a6b49ce80e5f25
+Strict time order:   False
+Capture hardware:    Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz (with SSE4.2)
+Capture oper-sys:    Linux 6.8.0-55-generic
+Capture application: Dumpcap (Wireshark) 4.2.2 (Git v4.2.2 packaged as 4.2.2-1.1build3)
+Number of interfaces in file: 1
+Interface #0 info:
+                     Name = tun0
+                     Encapsulation = Raw IP (7 - rawip)
+                     Capture length = 262144
+                     Time precision = nanoseconds (9)
+                     Time ticks per second = 1000000000
+                     Time resolution = 0x09
+                     Filter string = host PRIVATE_IP_022 or tcp port 502 or udp port 502 or icmp
+                     Operating system = Linux 6.8.0-55-generic
+                     Number of stat entries = 1
+                     Number of packets = 55752
+[exit_code=0]

@@ -1,0 +1,32 @@
+[2026-06-24T16:03:31-0500] ip -s link show dev tun0 > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/ip_s_link_before.log 2>&1
+[2026-06-24T16:03:31-0500] ss -ti dst PRIVATE_IP_022 > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/ss_before.log 2>&1
+[2026-06-24T16:03:31-0500] nstat -az > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/nstat_before.log 2>&1
+[2026-06-24T16:03:31-0500] sar -n DEV,EDEV,TCP,ETCP 1 3600 > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/sar_net_dev.log 2>&1 &
+[2026-06-24T16:03:31-0500] sar -u ALL 1 3600 > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/sar_cpu.log 2>&1 &
+[2026-06-24T16:03:31-0500] sar -q 1 3600 > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/sar_load.log 2>&1 &
+[2026-06-24T16:03:31-0500] mpstat -P ALL 1 3600 > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/mpstat_all.log 2>&1 &
+[2026-06-24T16:03:31-0500] vmstat 1 3600 > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/vmstat.log 2>&1 &
+[2026-06-24T16:03:31-0500] pidstat -rudw 1 3600 > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/pidstat_all.log 2>&1 &
+[2026-06-24T16:03:31-0500] timeout 3600 tshark -i tun0 -f 'host PRIVATE_IP_022 or tcp port 502 or udp port 502 or icmp' -w LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/pcap/baseline_1h_PRIVATE_IP_022_502_tun0.pcapng
+[2026-06-24T16:03:33-0500] systemctl status openvpn --no-pager > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/openvpn_systemctl_status.log 2>&1
+[2026-06-24T16:03:33-0500] tracepath PRIVATE_IP_022 > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/tracepath_PRIVATE_IP_022.log 2>&1
+[2026-06-24T16:03:33-0500] mtr -r -c 100 PRIVATE_IP_022 > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/mtr_PRIVATE_IP_022.log 2>&1
+[2026-06-24T16:05:18-0500] ping -M do -s 1200 -c 3 PRIVATE_IP_022 >> LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/pmtu_ping_M_do.log
+[2026-06-24T16:05:20-0500] ping -M do -s 1280 -c 3 PRIVATE_IP_022 >> LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/pmtu_ping_M_do.log
+[2026-06-24T16:05:22-0500] ping -M do -s 1320 -c 3 PRIVATE_IP_022 >> LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/pmtu_ping_M_do.log
+[2026-06-24T16:05:24-0500] ping -M do -s 1360 -c 3 PRIVATE_IP_022 >> LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/pmtu_ping_M_do.log
+[2026-06-24T16:05:26-0500] ping -M do -s 1380 -c 3 PRIVATE_IP_022 >> LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/pmtu_ping_M_do.log
+[2026-06-24T16:05:28-0500] ping -M do -s 1400 -c 3 PRIVATE_IP_022 >> LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/pmtu_ping_M_do.log
+[2026-06-24T16:05:30-0500] ping -M do -s 1420 -c 3 PRIVATE_IP_022 >> LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/pmtu_ping_M_do.log
+[2026-06-24T16:05:32-0500] ping -M do -s 1440 -c 3 PRIVATE_IP_022 >> LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/pmtu_ping_M_do.log
+[2026-06-24T16:05:34-0500] ping -M do -s 1460 -c 3 PRIVATE_IP_022 >> LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/pmtu_ping_M_do.log
+[2026-06-24T16:05:36-0500] ping -M do -s 1472 -c 3 PRIVATE_IP_022 >> LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/pmtu_ping_M_do.log
+[2026-06-24T16:05:38-0500] ping -D -i 0.2 -s 56 -c 18000 PRIVATE_IP_022 > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/ping_PRIVATE_IP_022.log 2>&1
+[2026-06-24T17:05:54-0500] python3 tcp_connect inline > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/csv/tcp_connect_PRIVATE_IP_022_502.csv
+[2026-06-24T17:07:57-0500] nping --tcp -p 502 --rate 5 -c 1000 PRIVATE_IP_022 > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/nping_tcp_PRIVATE_IP_022_502.log 2>&1
+[2026-06-24T17:07:57-0500] openssl speed -seconds 3 -evp aes-128-gcm > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/openssl_speed_aes_128_gcm.log 2>&1
+[2026-06-24T17:08:15-0500] openssl speed -seconds 3 -evp aes-256-gcm > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/openssl_speed_aes_256_gcm.log 2>&1
+[2026-06-24T17:08:33-0500] openssl speed -seconds 3 -evp chacha20-poly1305 > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/openssl_speed_chacha20_poly1305.log 2>&1
+[2026-06-24T17:08:54-0500] ip -s link show dev tun0 > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/ip_s_link_after.log 2>&1
+[2026-06-24T17:08:54-0500] ss -ti dst PRIVATE_IP_022 > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/ss_after.log 2>&1
+[2026-06-24T17:08:54-0500] nstat -az > LOCAL_PATH_REDACTEDl/Res_Baseline/scada_probe_1h/baseline_1h_PRIVATE_IP_022_20260624_160330/raw/nstat_after.log 2>&1

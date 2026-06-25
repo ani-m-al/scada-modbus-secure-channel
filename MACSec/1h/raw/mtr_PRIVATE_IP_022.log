@@ -1,0 +1,5 @@
+Start: 2026-06-25T00:36:11-0500
+HOST: ubuntu                      Loss%   Snt   Last   Avg  Best  Wrst StDev
+  1.|-- PRIVATE_IP_002                   0.0%   100    1.4   1.3   0.8   4.7   0.5
+  2.|-- PRIVATE_IP_022             0.0%   100    3.9   3.5   2.3   6.6   0.6
+[exit_code=0]

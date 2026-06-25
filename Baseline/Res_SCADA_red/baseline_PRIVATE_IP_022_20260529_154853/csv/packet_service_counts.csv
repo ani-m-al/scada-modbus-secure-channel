@@ -1,0 +1,6 @@
+run_id,scenario,target,iface,source_method,service,direction,packets,bytes,notes
+baseline_PRIVATE_IP_022_20260529_154853,baseline,PRIVATE_IP_022,tun0,estimated_from_logs,ICMP,sent_to_target,2500,,Estimado desde resumen de ping.
+baseline_PRIVATE_IP_022_20260529_154853,baseline,PRIVATE_IP_022,tun0,estimated_from_logs,ICMP,received_from_target,2500,,Estimado desde resumen de ping.
+baseline_PRIVATE_IP_022_20260529_154853,baseline,PRIVATE_IP_022,tun0,estimated_from_logs,TCP_CONNECT,connection_attempts,500,,No es conteo de paquetes de red; es numero de intentos TCP connect.
+baseline_PRIVATE_IP_022_20260529_154853,baseline,PRIVATE_IP_022,tun0,estimated_from_logs,MTR,probe_cycles,100,,Estimacion de ciclos MTR; puede usar ICMP/UDP segun implementacion.
+baseline_PRIVATE_IP_022_20260529_154853,baseline,PRIVATE_IP_022,tun0,estimated_from_logs,NPING_TCP_SYN,sent_to_target,,,Estimado desde nping TCP SYN.

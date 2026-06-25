@@ -37,7 +37,7 @@ Ejemplo baseline:
 ```bash
 ~/tesis/tools/scada_probe_v1.sh \
   --label baseline \
-  --target PRIVATE_IP_021 \
+  --target PRIVATE_IP_022 \
   --port 502 \
   --iface tun0 \
   --duration 300 \
@@ -49,7 +49,7 @@ Ejemplo canal seguro/VPN:
 ```bash
 ~/tesis/tools/scada_probe_v1.sh \
   --label vpn \
-  --target PRIVATE_IP_021 \
+  --target PRIVATE_IP_022 \
   --port 502 \
   --iface tun0 \
   --duration 300 \
@@ -100,7 +100,7 @@ Ejemplo para una PC/SBC con una interfaz hacia el PLC y otra hacia SCADA/MACsec:
 ```bash
 sudo ~/tesis/tools/scada_probe_v1_1_multiiface.sh \
   --label baseline_multiiface \
-  --target PRIVATE_IP_021 \
+  --target PRIVATE_IP_022 \
   --port 502 \
   --ifaces enx105a9524c6e5,eno1,macsec0 \
   --duration 300 \
@@ -112,7 +112,7 @@ También puede usarse `--iface` con lista separada por comas:
 ```bash
 sudo ~/tesis/tools/scada_probe_v1_1_multiiface.sh \
   --label macsec_multiiface \
-  --target PRIVATE_IP_021 \
+  --target PRIVATE_IP_022 \
   --port 502 \
   --iface enx105a9524c6e5,eno1,macsec0 \
   --duration 300 \

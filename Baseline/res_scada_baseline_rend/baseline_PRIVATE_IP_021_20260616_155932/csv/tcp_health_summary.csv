@@ -1,7 +1,0 @@
-run_id,scenario,target,iface,metric,label,value,unit,source_file,notes
-baseline_PRIVATE_IP_021_20260616_155932,baseline,PRIVATE_IP_021,tun0,tcp_connect_success_rate,Exito TCP connect,100.00,%,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
-baseline_PRIVATE_IP_021_20260616_155932,baseline,PRIVATE_IP_021,tun0,tcp_connect_avg,TCP connect promedio,3.796,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
-baseline_PRIVATE_IP_021_20260616_155932,baseline,PRIVATE_IP_021,tun0,tcp_connect_median,TCP connect mediana,3.748,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
-baseline_PRIVATE_IP_021_20260616_155932,baseline,PRIVATE_IP_021,tun0,tcp_connect_p95,TCP connect p95,4.564,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
-baseline_PRIVATE_IP_021_20260616_155932,baseline,PRIVATE_IP_021,tun0,tcp_connect_p99,TCP connect p99,6.232,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
-baseline_PRIVATE_IP_021_20260616_155932,baseline,PRIVATE_IP_021,tun0,tcp_connect_max,TCP connect maximo,7.274,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.

@@ -1,0 +1,3 @@
+run_id,scenario,target,iface,service,n,min_ms,q1_ms,median_ms,mean_ms,q3_ms,p95_ms,p99_ms,max_ms,std_ms,ci95_low_ms,ci95_high_ms,source_file
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,ICMP,17980,1.980,3.440,3.600,5.634,3.790,4.540,7.270,5016.00,81.951,4.436,6.832,raw/ping_PRIVATE_IP_022.log
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,TCP_CONNECT,600,3.042,4.009,4.594,8.203,4.835,5.317,7.857,1031.59,59.203,3.465,12.940,csv/tcp_connect_PRIVATE_IP_022_502.csv

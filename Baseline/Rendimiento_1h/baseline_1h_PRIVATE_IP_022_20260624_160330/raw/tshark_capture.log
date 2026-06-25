@@ -1,0 +1,3 @@
+Capturing on 'tun0'
+tshark: Couldn't run dumpcap in child process: Permission denied
+0 packets captured

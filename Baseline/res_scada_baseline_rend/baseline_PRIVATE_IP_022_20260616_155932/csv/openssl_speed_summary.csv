@@ -1,0 +1,4 @@
+run_id,scenario,target,iface,algorithm,throughput_kBps,source_file,notes
+baseline_PRIVATE_IP_022_20260616_155932,baseline,PRIVATE_IP_022,tun0,aes_128_gcm,6.32e+07,raw/openssl_speed_aes_128_gcm.log,Mayor valor de throughput reportado por openssl speed; unidad original aproximada kB/s.
+baseline_PRIVATE_IP_022_20260616_155932,baseline,PRIVATE_IP_022,tun0,aes_256_gcm,5.62e+07,raw/openssl_speed_aes_256_gcm.log,Mayor valor de throughput reportado por openssl speed; unidad original aproximada kB/s.
+baseline_PRIVATE_IP_022_20260616_155932,baseline,PRIVATE_IP_022,tun0,chacha20_poly1305,3.89e+07,raw/openssl_speed_chacha20_poly1305.log,Mayor valor de throughput reportado por openssl speed; unidad original aproximada kB/s.

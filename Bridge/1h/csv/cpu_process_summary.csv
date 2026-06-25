@@ -1,0 +1,13 @@
+run_id,scenario,target,iface,rank,process,avg_cpu_pct,cumulative_cpu_pct,samples,source_file
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,1,node-red,36.048,36.048,3601,raw/pidstat_all.log
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,2,pg_isready,4.000,40.048,2,raw/pidstat_all.log
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,3,wget,3.500,43.548,4,raw/pidstat_all.log
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,4,kswapd0,3.000,46.548,2,raw/pidstat_all.log
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,5,pidstat,2.971,49.520,3601,raw/pidstat_all.log
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,6,grafana,2.667,52.187,3599,raw/pidstat_all.log
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,7,wazuh-agentd,2.484,54.671,1113,raw/pidstat_all.log
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,8,kcompactd0,2.380,57.051,116,raw/pidstat_all.log
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,9,postgres,2.295,59.347,11901,raw/pidstat_all.log
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,10,wazuh-modulesd,2.113,61.460,98,raw/pidstat_all.log
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,11,kworker/u18:3-events_freezable_power_,2.000,63.460,1,raw/pidstat_all.log
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,12,runc,1.529,64.989,17,raw/pidstat_all.log

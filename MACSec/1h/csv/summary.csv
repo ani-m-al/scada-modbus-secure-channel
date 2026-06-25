@@ -1,0 +1,18 @@
+scenario,metric,value,unit,source_file,notes
+MACsec_1h,pmtu_payload_max_success,1440,bytes_icmp_payload,raw/pmtu_ping_M_do.log,Mayor payload ICMP exitoso en lista fija.
+MACsec_1h,pmtu_ipv4_approx,1468,bytes,raw/pmtu_ping_M_do.log,Aproximacion IPv4: payload + 28 bytes.
+MACsec_1h,payload_entropy,1.924485,bits_per_byte,csv/payload_entropy.csv,Calculada sobre tcp.payload del puerto especificado en la interfaz capturada.
+MACsec_1h,payload_bytes_for_entropy,8792179,bytes,csv/payload_entropy.csv,Cantidad de bytes usados para entropia.
+MACsec_1h,icmp_packet_loss,0.111111,%,raw/ping_PRIVATE_IP_022.log,
+MACsec_1h,icmp_rtt_min,1.977,ms,raw/ping_PRIVATE_IP_022.log,
+MACsec_1h,icmp_rtt_avg,5.633,ms,raw/ping_PRIVATE_IP_022.log,
+MACsec_1h,icmp_rtt_max,5015.696,ms,raw/ping_PRIVATE_IP_022.log,
+MACsec_1h,icmp_rtt_mdev,81.942,ms,raw/ping_PRIVATE_IP_022.log,Proxy simple de jitter ICMP.
+MACsec_1h,tcp_connect_success_rate,100.000000,%,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+MACsec_1h,tcp_connect_samples,600,samples,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+MACsec_1h,tcp_connect_min,3.041597,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+MACsec_1h,tcp_connect_avg,8.202592,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+MACsec_1h,tcp_connect_median,4.594402,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+MACsec_1h,tcp_connect_p95,5.317009,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+MACsec_1h,tcp_connect_p99,7.857457,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+MACsec_1h,tcp_connect_max,1031.585971,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.

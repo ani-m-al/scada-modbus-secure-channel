@@ -1,4 +1,0 @@
-run_id,scenario,target,iface,algorithm,throughput_kBps,source_file,notes
-bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,aes_128_gcm,6.37e+07,raw/openssl_speed_aes_128_gcm.log,Mayor valor de throughput reportado por openssl speed; unidad original aproximada kB/s.
-bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,aes_256_gcm,5.69e+07,raw/openssl_speed_aes_256_gcm.log,Mayor valor de throughput reportado por openssl speed; unidad original aproximada kB/s.
-bridge_PRIVATE_IP_021_20260616_172248,bridge,PRIVATE_IP_021,tun0,chacha20_poly1305,3.78e+07,raw/openssl_speed_chacha20_poly1305.log,Mayor valor de throughput reportado por openssl speed; unidad original aproximada kB/s.

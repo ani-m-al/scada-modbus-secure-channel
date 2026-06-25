@@ -1,0 +1,7 @@
+run_id,scenario,target,iface,source_method,service,direction,packets,bytes,notes
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,pcap_tshark,ICMP,received_from_target,17408,1499768,Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,pcap_tshark,ICMP,sent_to_target,17516,1506840,Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,pcap_tshark,OTHER,other,103,10664,Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,pcap_tshark,TCP_PORT_502,received_from_target,26623,3017644,Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,pcap_tshark,TCP_PORT_502,sent_to_target,43706,2006940,Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.
+bridge_1h_PRIVATE_IP_022_20260624_230631,bridge_1h,PRIVATE_IP_022,tun0,pcap_tshark,UDP_OTHER,sent_to_target,3,4500,Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.

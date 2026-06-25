@@ -1,0 +1,18 @@
+scenario,metric,value,unit,source_file,notes
+bridge_1h,pmtu_payload_max_success,1472,bytes_icmp_payload,raw/pmtu_ping_M_do.log,Mayor payload ICMP exitoso en lista fija.
+bridge_1h,pmtu_ipv4_approx,1500,bytes,raw/pmtu_ping_M_do.log,Aproximacion IPv4: payload + 28 bytes.
+bridge_1h,payload_entropy,1.932093,bits_per_byte,csv/payload_entropy.csv,Calculada sobre tcp.payload del puerto especificado en la interfaz capturada.
+bridge_1h,payload_bytes_for_entropy,8774180,bytes,csv/payload_entropy.csv,Cantidad de bytes usados para entropia.
+bridge_1h,icmp_packet_loss,0.0444444,%,raw/ping_PRIVATE_IP_022.log,
+bridge_1h,icmp_rtt_min,1.820,ms,raw/ping_PRIVATE_IP_022.log,
+bridge_1h,icmp_rtt_avg,5.809,ms,raw/ping_PRIVATE_IP_022.log,
+bridge_1h,icmp_rtt_max,4241.889,ms,raw/ping_PRIVATE_IP_022.log,
+bridge_1h,icmp_rtt_mdev,82.315,ms,raw/ping_PRIVATE_IP_022.log,Proxy simple de jitter ICMP.
+bridge_1h,tcp_connect_success_rate,100.000000,%,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+bridge_1h,tcp_connect_samples,600,samples,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+bridge_1h,tcp_connect_min,2.986999,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+bridge_1h,tcp_connect_avg,4.408137,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+bridge_1h,tcp_connect_median,4.445438,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+bridge_1h,tcp_connect_p95,5.325015,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+bridge_1h,tcp_connect_p99,6.336060,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+bridge_1h,tcp_connect_max,9.877748,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.

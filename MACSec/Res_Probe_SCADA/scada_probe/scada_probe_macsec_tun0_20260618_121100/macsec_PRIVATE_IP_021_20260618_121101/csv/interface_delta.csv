@@ -1,2 +1,0 @@
-run_id,scenario,target,iface,rx_packets_delta,tx_packets_delta,rx_bytes_delta,tx_bytes_delta,source_file
-macsec_PRIVATE_IP_021_20260618_121101,macsec,PRIVATE_IP_021,tun0,0,0,0,0,raw/ip_s_link_before.log;raw/ip_s_link_after.log

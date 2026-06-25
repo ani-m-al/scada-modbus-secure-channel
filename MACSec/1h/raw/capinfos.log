@@ -1,0 +1,34 @@
+File name:           LOCAL_PATH_REDACTEDl/Res_MACSec/scada_probe_1h/MACsec_1h_PRIVATE_IP_022_20260625_003608/pcap/MACsec_1h_PRIVATE_IP_022_502_tun0.pcapng
+File type:           Wireshark/... - pcapng
+File encapsulation:  Raw IP
+File timestamp precision:  nanoseconds (9)
+Packet size limit:   file hdr: (not set)
+Number of packets:   439 k
+File size:           44 MB
+Data size:           30 MB
+Capture duration:    3599,392442687 seconds
+First packet time:   2026-06-25 00:36:10,039801418
+Last packet time:    2026-06-25 01:36:09,432244105
+Data byte rate:      8.547 bytes/s
+Data bit rate:       68 kbps
+Average packet size: 70,02 bytes
+Average packet rate: 122 packets/s
+SHA256:              REDACTED_LONG_HEX
+SHA1:                967075b8a88504918577c5724fa02250e5030f7a
+Strict time order:   False
+Capture hardware:    Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz (with SSE4.2)
+Capture oper-sys:    Linux 6.8.0-55-generic
+Capture application: Dumpcap (Wireshark) 4.2.2 (Git v4.2.2 packaged as 4.2.2-1.1build3)
+Number of interfaces in file: 1
+Interface #0 info:
+                     Name = tun0
+                     Encapsulation = Raw IP (7 - rawip)
+                     Capture length = 262144
+                     Time precision = nanoseconds (9)
+                     Time ticks per second = 1000000000
+                     Time resolution = 0x09
+                     Filter string = host PRIVATE_IP_022 or tcp port 502 or udp port 502 or icmp
+                     Operating system = Linux 6.8.0-55-generic
+                     Number of stat entries = 1
+                     Number of packets = 439385
+[exit_code=0]

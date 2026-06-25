@@ -77,7 +77,7 @@ table{width:100%;border-collapse:collapse;margin:10px 0;background:#0f172a;borde
 <section class="card">
 <h2>Modbus por API</h2>
 <table><tr><th>API/PLC</th><th>Requests</th><th>Responses</th><th>Excepciones</th><th>RTT avg ms</th><th>RTT p95 ms</th><th>RTT max ms</th></tr>
-<tr><td>PRIVATE_IP_021</td><td>1202</td><td>1204</td><td>0</td><td>4.645</td><td>7.031</td><td>11.454</td></tr>
+<tr><td>PRIVATE_IP_022</td><td>1202</td><td>1204</td><td>0</td><td>4.645</td><td>7.031</td><td>11.454</td></tr>
 </table>
 </section>
 
@@ -107,8 +107,8 @@ generated_at=2026-06-18T16:52:59+00:00
 hostname=HOST_REDACTED
 kernel=Linux 6.8.0-124-generic x86_64 GNU/Linux
 mode=macsec
-scada_ip=PRIVATE_IP_023
-api_ips=PRIVATE_IP_021
+scada_ip=PRIVATE_IP_024
+api_ips=PRIVATE_IP_022
 if_scada=enp2s0
 if_plc=enp1s0
 bridge=br0
@@ -123,11 +123,11 @@ lo               UNKNOWN        PRIVATE_IP_005/8 ::1/128
 enp1s0           UP             
 enp2s0           UP             
 wlp3s0           DOWN           
-br0              UP             PRIVATE_IP_024/24 IPV6_ADDR_003 
+br0              UP             PRIVATE_IP_025/24 IPV6_ADDR_003 
 macsec0@enp2s0   UP             IPV6_ADDR_002 
 
 ## ip route
-PRIVATE_IP_008/24 dev br0 proto kernel scope link src PRIVATE_IP_024 
+PRIVATE_IP_008/24 dev br0 proto kernel scope link src PRIVATE_IP_025 
 
 ## bridge link
 2: enp1s0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 master br0 state forwarding priority 32 cost 19 

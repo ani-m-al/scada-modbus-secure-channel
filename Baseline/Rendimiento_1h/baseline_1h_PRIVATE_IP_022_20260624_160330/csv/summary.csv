@@ -1,0 +1,16 @@
+scenario,metric,value,unit,source_file,notes
+baseline_1h,pmtu_payload_max_success,1472,bytes_icmp_payload,raw/pmtu_ping_M_do.log,Mayor payload ICMP exitoso en lista fija.
+baseline_1h,pmtu_ipv4_approx,1500,bytes,raw/pmtu_ping_M_do.log,Aproximacion IPv4: payload + 28 bytes.
+baseline_1h,icmp_packet_loss,0,%,raw/ping_PRIVATE_IP_022.log,
+baseline_1h,icmp_rtt_min,1.688,ms,raw/ping_PRIVATE_IP_022.log,
+baseline_1h,icmp_rtt_avg,2.847,ms,raw/ping_PRIVATE_IP_022.log,
+baseline_1h,icmp_rtt_max,44.454,ms,raw/ping_PRIVATE_IP_022.log,
+baseline_1h,icmp_rtt_mdev,0.932,ms,raw/ping_PRIVATE_IP_022.log,Proxy simple de jitter ICMP.
+baseline_1h,tcp_connect_success_rate,100.000000,%,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+baseline_1h,tcp_connect_samples,600,samples,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+baseline_1h,tcp_connect_min,2.284643,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+baseline_1h,tcp_connect_avg,3.775579,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+baseline_1h,tcp_connect_median,3.773404,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+baseline_1h,tcp_connect_p95,4.731544,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+baseline_1h,tcp_connect_p99,5.756731,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+baseline_1h,tcp_connect_max,10.662833,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.

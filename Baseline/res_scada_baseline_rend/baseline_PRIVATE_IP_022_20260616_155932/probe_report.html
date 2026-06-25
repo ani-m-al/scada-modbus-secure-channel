@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Reporte SCADA VPN Probe - baseline</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 32px; line-height: 1.45; color: #1f2933; }
+h1, h2, h3 { color: #102a43; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+.card { border: 1px solid #d9e2ec; border-radius: 12px; padding: 16px; background: #f8fafc; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0 24px 0; font-size: 13px; }
+th, td { border: 1px solid #d9e2ec; padding: 8px; vertical-align: top; }
+th { background: #eef2f7; text-align: left; }
+code { background: #eef2f7; padding: 2px 4px; border-radius: 4px; }
+.badge { display: inline-block; border-radius: 999px; padding: 3px 8px; font-weight: bold; font-size: 12px; }
+.ok { background: #dcfce7; color: #166534; }
+.warning { background: #fef3c7; color: #92400e; }
+.error { background: #fee2e2; color: #991b1b; }
+.check { background: #e0f2fe; color: #075985; }
+.info { background: #e5e7eb; color: #374151; }
+svg { width: 100%; max-width: 980px; height: auto; border: 1px solid #d9e2ec; border-radius: 12px; background: #ffffff; margin-bottom: 18px; }
+.axis { stroke: #9fb3c8; stroke-width: 1; }
+.gridline { stroke: #e5e7eb; stroke-width: 1; }
+.bar { fill: #3b82f6; }
+.bar-cpu { fill: #94a3b8; }
+.box { fill: #bfdbfe; stroke: #1d4ed8; stroke-width: 1; }
+.whisker { stroke: #1d4ed8; stroke-width: 2; }
+.median { stroke: #111827; stroke-width: 3; }
+.mean { fill: #ef4444; }
+.ci { stroke: #0ea5e9; stroke-width: 4; stroke-dasharray: 6 4; }
+.line-total { fill: none; stroke: #2563eb; stroke-width: 3; }
+.point-total { fill: #2563eb; }
+.line-a { fill: none; stroke: #2563eb; stroke-width: 1.7; }
+.line-b { fill: none; stroke: #16a34a; stroke-width: 1.7; }
+.line-c { fill: none; stroke: #dc2626; stroke-width: 1.7; }
+.line-d { fill: none; stroke: #9333ea; stroke-width: 1.7; }
+.svg-label { font-size: 13px; fill: #334e68; }
+.svg-value { font-size: 13px; fill: #102a43; font-weight: bold; }
+.muted { color: #627d98; }
+pre { white-space: pre-wrap; background: #f8fafc; border: 1px solid #d9e2ec; border-radius: 8px; padding: 12px; }
+@media print { body { margin: 16px; } .card, svg { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<h1>Reporte interpretado SCADA VPN Probe</h1>
+<div class="grid">
+  <div class="card"><strong>Escenario</strong><br>baseline</div>
+  <div class="card"><strong>Target</strong><br>PRIVATE_IP_022:502</div>
+  <div class="card"><strong>Interfaz</strong><br>tun0</div>
+  <div class="card"><strong>Duracion</strong><br>300 s</div>
+  <div class="card"><strong>Run ID</strong><br><code>baseline_PRIVATE_IP_022_20260616_155932</code></div>
+  <div class="card"><strong>Generado</strong><br>2026-06-16 21:08:48 UTC</div>
+</div>
+
+<h2>1. Lectura tecnica consolidada</h2>
+<table><thead><tr><th>Seccion</th><th>Item</th><th>Estado</th><th>Valor</th><th>Interpretacion</th><th>Recomendacion</th></tr></thead><tbody><tr><td>Conectividad</td><td>Perdida ICMP</td><td><span class='badge ok'>OK</span></td><td>0 %</td><td>Perdida ICMP observada: 0 %.</td><td>Mantener como referencia baseline.</td></tr><tr><td>Latencia</td><td>RTT ICMP promedio</td><td><span class='badge ok'>OK</span></td><td>2.825 ms</td><td>RTT ICMP promedio: 2.825 ms.</td><td>Usar como referencia directa para comparar baseline vs VPN.</td></tr><tr><td>Latencia</td><td>TCP connect promedio</td><td><span class='badge ok'>OK</span></td><td>3.795510 ms</td><td>TCP connect promedio: 3.795510 ms.</td><td>Usar como referencia directa para comparar baseline vs VPN.</td></tr><tr><td>Latencia</td><td>TCP connect p95</td><td><span class='badge ok'>OK</span></td><td>4.563947 ms</td><td>TCP connect p95: 4.563947 ms.</td><td>Usar como referencia directa para comparar baseline vs VPN.</td></tr><tr><td>Latencia</td><td>TCP connect p99</td><td><span class='badge ok'>OK</span></td><td>6.232209 ms</td><td>TCP connect p99: 6.232209 ms.</td><td>Usar como referencia directa para comparar baseline vs VPN.</td></tr><tr><td>Servicio TCP</td><td>Tasa de exito TCP connect</td><td><span class='badge ok'>OK</span></td><td>100.000000 %</td><td>Tasa de exito de establecimiento TCP: 100.000000 %.</td><td>El puerto TCP fue alcanzable durante todas las muestras.</td></tr><tr><td>MTU</td><td>PMTU aproximada</td><td><span class='badge ok'>OK</span></td><td>1500 bytes</td><td>PMTU IPv4 aproximada: 1500 bytes.</td><td>PMTU cercana a Ethernet estandar.</td></tr><tr><td>Captura</td><td>Entropia de payload</td><td><span class='badge info'>INFO</span></td><td>2.150854 bits_per_byte</td><td>Entropia estimada: 2.150854 bits_per_byte.</td><td>Entropia baja, compatible con trafico estructurado o texto claro.</td></tr><tr><td>Recursos</td><td>CPU ocupada</td><td><span class='badge ok'>OK</span></td><td>8.290 %</td><td>CPU ocupada promedio: 8.290 %.</td><td>No se aprecia saturacion general de CPU.</td></tr><tr><td>Recursos</td><td>Proceso con mayor CPU</td><td><span class='badge info'>INFO</span></td><td>34.953 %</td><td>El proceso con mayor consumo agregado fue node-red con 34.953 %CPU promedio.</td><td>Comparar el mismo top de procesos entre baseline y VPN.</td></tr><tr><td>Trafico</td><td>Conteo por servicio</td><td><span class='badge info'>INFO</span></td><td> packets</td><td>Se genero conteo de paquetes por servicio usando metodo: pcap_tshark.</td><td>Si existe pcap, el conteo es real; si no, se estima desde logs de las pruebas.</td></tr><tr><td>Interfaz</td><td>Delta TX/RX</td><td><span class='badge info'>INFO</span></td><td>TX 0 / RX 0 packets</td><td>Durante la corrida se observo delta de 0 paquetes TX y 0 paquetes RX en tun0.</td><td>Usar para verificar si la prueba genero trafico real en la interfaz seleccionada.</td></tr></tbody></table>
+
+<h2>2. Metricas clave comparables</h2>
+<p>Estas metricas deben compararse entre corridas con la misma duracion, mismo target, misma interfaz equivalente y mismas opciones del script.</p>
+<table><thead><tr><th>label</th><th>metric</th><th>value</th><th>unit</th><th>source_file</th></tr></thead><tbody><tr><td>Perdida ICMP</td><td>icmp_packet_loss</td><td>0</td><td>%</td><td>raw/ping_PRIVATE_IP_022.log</td></tr><tr><td>RTT ICMP promedio</td><td>icmp_rtt_avg</td><td>2.825</td><td>ms</td><td>raw/ping_PRIVATE_IP_022.log</td></tr><tr><td>Variacion ICMP</td><td>icmp_rtt_mdev</td><td>0.596</td><td>ms</td><td>raw/ping_PRIVATE_IP_022.log</td></tr><tr><td>Exito TCP connect</td><td>tcp_connect_success_rate</td><td>100.000000</td><td>%</td><td>csv/tcp_connect_stats.csv</td></tr><tr><td>TCP connect promedio</td><td>tcp_connect_avg</td><td>3.795510</td><td>ms</td><td>csv/tcp_connect_stats.csv</td></tr><tr><td>TCP connect p95</td><td>tcp_connect_p95</td><td>4.563947</td><td>ms</td><td>csv/tcp_connect_stats.csv</td></tr><tr><td>TCP connect p99</td><td>tcp_connect_p99</td><td>6.232209</td><td>ms</td><td>csv/tcp_connect_stats.csv</td></tr><tr><td>PMTU IPv4 aproximada</td><td>pmtu_ipv4_approx</td><td>1500</td><td>bytes</td><td>raw/pmtu_ping_M_do.log</td></tr><tr><td>Entropia de payload</td><td>payload_entropy</td><td>2.150854</td><td>bits_per_byte</td><td>csv/payload_entropy.csv</td></tr><tr><td>CPU ocupada promedio</td><td>cpu_avg_busy_pct</td><td>8.290</td><td>%</td><td>raw/sar_cpu.log</td></tr><tr><td>Recepcion promedio</td><td>net_rx_kBps</td><td>2.500</td><td>kB/s</td><td>raw/sar_net_dev.log</td></tr><tr><td>Transmision promedio</td><td>net_tx_kBps</td><td>1.905</td><td>kB/s</td><td>raw/sar_net_dev.log</td></tr><tr><td>net_rxpck_s</td><td>net_rxpck_s</td><td>26.780</td><td>packets/s</td><td>raw/sar_net_dev.log</td></tr><tr><td>net_txpck_s</td><td>net_txpck_s</td><td>36.740</td><td>packets/s</td><td>raw/sar_net_dev.log</td></tr><tr><td>Paquetes TX interfaz</td><td>interface_tx_packets_delta</td><td>0.000</td><td>packets</td><td>raw/ip_s_link_before.log;raw/ip_s_link_after.log</td></tr><tr><td>Paquetes RX interfaz</td><td>interface_rx_packets_delta</td><td>0.000</td><td>packets</td><td>raw/ip_s_link_before.log;raw/ip_s_link_after.log</td></tr></tbody></table>
+
+<h2>3. Paquetes enviados por servicio</h2>
+<p>La barra representa trafico enviado hacia el objetivo. Si hay captura, se usa el pcap; si no, se estima desde los logs generados por cada prueba.</p>
+<h3>Paquetes enviados por servicio</h3>
+<svg viewBox='0 0 920 187' role='img' aria-label='Paquetes enviados por servicio'>
+<line x1='260' y1='24' x2='830' y2='24' class='axis'/>
+<text x='12' y='60' class='svg-label'>ICMP</text>
+<rect x='260' y='42' width='164.3' height='26' rx='5' class='bar'></rect>
+<text x='434.3' y='60' class='svg-value'>1090.00 packets</text>
+<text x='12' y='104' class='svg-label'>TCP_PORT_502</text>
+<rect x='260' y='86' width='520.0' height='26' rx='5' class='bar'></rect>
+<text x='790.0' y='104' class='svg-value'>3450.00 packets</text>
+<text x='12' y='148' class='svg-label'>UDP_OTHER</text>
+<rect x='260' y='130' width='2.0' height='26' rx='5' class='bar'></rect>
+<text x='272.0' y='148' class='svg-value'>3.000 packets</text>
+</svg><p class='muted'>Conteo real desde pcap.</p>
+<table><thead><tr><th>source_method</th><th>service</th><th>direction</th><th>packets</th><th>bytes</th><th>notes</th></tr></thead><tbody><tr><td>pcap_tshark</td><td>ICMP</td><td>received_from_target</td><td>990</td><td>120656</td><td>Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.</td></tr><tr><td>pcap_tshark</td><td>ICMP</td><td>sent_to_target</td><td>1090</td><td>127056</td><td>Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.</td></tr><tr><td>pcap_tshark</td><td>OTHER</td><td>other</td><td>103</td><td>10664</td><td>Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.</td></tr><tr><td>pcap_tshark</td><td>TCP_PORT_502</td><td>received_from_target</td><td>2101</td><td>246040</td><td>Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.</td></tr><tr><td>pcap_tshark</td><td>TCP_PORT_502</td><td>sent_to_target</td><td>3450</td><td>158400</td><td>Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.</td></tr><tr><td>pcap_tshark</td><td>UDP_OTHER</td><td>sent_to_target</td><td>3</td><td>4500</td><td>Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.</td></tr></tbody></table>
+
+<h2>4. Latencias por tipo de mensaje</h2>
+<p>El boxplot muestra minimo, Q1, mediana, media, Q3, maximo e intervalo de confianza del 95 %. Sirve para comparar estabilidad, no solo promedio.</p>
+<h3>Boxplot de latencia por servicio</h3>
+<svg viewBox='0 0 1080 304' role='img' aria-label='Boxplot de latencia por servicio'>
+<text x='185' y='28' class='svg-label'>Escala: 0 a 11.900 ms. La tabla inferior contiene media, mediana e IC95.</text>
+<line x1='185.0' y1='42' x2='185.0' y2='262' class='gridline'/>
+<text x='173.0' y='284' class='svg-label'>0.00</text>
+<line x1='353.0' y1='42' x2='353.0' y2='262' class='gridline'/>
+<text x='341.0' y='284' class='svg-label'>2.38</text>
+<line x1='521.0' y1='42' x2='521.0' y2='262' class='gridline'/>
+<text x='509.0' y='284' class='svg-label'>4.76</text>
+<line x1='689.0' y1='42' x2='689.0' y2='262' class='gridline'/>
+<text x='677.0' y='284' class='svg-label'>7.14</text>
+<line x1='857.0' y1='42' x2='857.0' y2='262' class='gridline'/>
+<text x='845.0' y='284' class='svg-label'>9.52</text>
+<line x1='1025.0' y1='42' x2='1025.0' y2='262' class='gridline'/>
+<text x='1013.0' y='284' class='svg-label'>11.90</text>
+<text x='18' y='95.0' class='svg-label'>ICMP  n=1500</text>
+<line x1='307.8' y1='90.0' x2='1025.0' y2='90.0' class='whisker'/>
+<line x1='307.8' y1='81.0' x2='307.8' y2='99.0' class='whisker'/>
+<line x1='1025.0' y1='81.0' x2='1025.0' y2='99.0' class='whisker'/>
+<rect x='362.2' y='78.0' width='31.8' height='24' rx='4' class='box'></rect>
+<line x1='373.5' y1='78.0' x2='373.5' y2='102.0' class='median'/>
+<circle cx='384.5' cy='90.0' r='5' class='mean'/>
+<line x1='382.3' y1='116.0' x2='386.6' y2='116.0' class='ci'/>
+<text x='185' y='139.0' class='svg-label'>min 1.740 | Q1 2.510 | med 2.670 | mean 2.826 | Q3 2.960 | max 11.900</text>
+<text x='18' y='179.0' class='svg-label'>TCP_CONNECT  n=300</text>
+<line x1='359.5' y1='174.0' x2='698.5' y2='174.0' class='whisker'/>
+<line x1='359.5' y1='165.0' x2='359.5' y2='183.0' class='whisker'/>
+<line x1='698.5' y1='165.0' x2='698.5' y2='183.0' class='whisker'/>
+<rect x='432.5' y='162.0' width='37.2' height='24' rx='4' class='box'></rect>
+<line x1='449.6' y1='162.0' x2='449.6' y2='186.0' class='median'/>
+<circle cx='453.0' cy='174.0' r='5' class='mean'/>
+<line x1='448.3' y1='200.0' x2='457.5' y2='200.0' class='ci'/>
+<text x='185' y='223.0' class='svg-label'>min 2.472 | Q1 3.506 | med 3.748 | mean 3.796 | Q3 4.033 | max 7.274</text>
+<text x='185' y='302' class='svg-label'>Caja: Q1-Q3 | linea negra: mediana | punto rojo: media | linea punteada: IC95</text>
+</svg>
+<h3>Serie temporal de latencia por servicio</h3>
+<svg viewBox='0 0 1080 390' role='img' aria-label='Serie temporal de latencia'>
+<line x1='70' y1='325' x2='1030' y2='325' class='axis'/>
+<line x1='70' y1='50' x2='70' y2='325' class='axis'/>
+<line x1='70' y1='50.0' x2='1030' y2='50.0' class='gridline'/>
+<text x='12' y='54.0' class='svg-label'>12.71 ms</text>
+<line x1='70' y1='105.0' x2='1030' y2='105.0' class='gridline'/>
+<text x='12' y='109.0' class='svg-label'>10.36 ms</text>
+<line x1='70' y1='160.0' x2='1030' y2='160.0' class='gridline'/>
+<text x='12' y='164.0' class='svg-label'>8.00 ms</text>
+<line x1='70' y1='215.0' x2='1030' y2='215.0' class='gridline'/>
+<text x='12' y='219.0' class='svg-label'>5.64 ms</text>
+<line x1='70' y1='270.0' x2='1030' y2='270.0' class='gridline'/>
+<text x='12' y='274.0' class='svg-label'>3.28 ms</text>
+<line x1='70' y1='325.0' x2='1030' y2='325.0' class='gridline'/>
+<text x='12' y='329.0' class='svg-label'>0.93 ms</text>
+<polyline points='70.0,280.4 71.3,279.3 72.6,279.4 73.8,282.5 75.1,279.1 76.4,280.5 77.7,279.2 79.0,282.7 80.3,285.4 81.5,288.1 82.8,285.9 84.1,286.1 85.4,286.9 86.7,283.3 87.9,283.2 89.2,281.4 90.5,285.2 91.8,284.9 93.1,282.0 94.4,282.7 95.6,278.5 96.9,282.6 98.2,281.6 99.5,278.5 100.8,281.9 102.0,282.2 103.3,285.3 104.6,288.0 105.9,287.2 107.2,287.8 108.5,285.9 109.7,286.2 111.0,280.8 112.3,278.6 113.6,271.8 114.9,265.5 116.1,269.7 117.4,271.4 118.7,278.2 120.0,277.8 121.3,281.5 122.6,283.9 123.8,281.9 125.1,283.1 126.4,281.2 127.7,281.2 129.0,280.8 130.2,283.3 131.5,284.1 132.8,284.6 134.1,282.8 135.4,282.9 136.6,280.3 137.9,273.4 139.2,274.2 140.5,279.0 141.8,280.6 143.1,287.3 144.3,285.8 145.6,279.5 146.9,278.5 148.2,277.2 149.5,274.2 150.7,280.2 152.0,272.3 153.3,275.2 154.6,276.7 155.9,277.4 157.2,287.8 158.4,283.6 159.7,282.5 161.0,283.4 162.3,282.1 163.6,285.9 164.8,286.6 166.1,285.5 167.4,285.1 168.7,286.0 170.0,285.9 171.3,283.5 172.5,279.6 173.8,278.8 175.1,276.7 176.4,279.6 177.7,279.7 178.9,276.8 180.2,280.5 181.5,282.5 182.8,285.3 184.1,278.7 185.4,279.1 186.6,276.2 187.9,275.9 189.2,279.1 190.5,273.9 191.8,277.1 193.0,275.6 194.3,278.8 195.6,277.7 196.9,272.9 198.2,276.7 199.5,277.1 200.7,277.9 202.0,282.5 203.3,279.1 204.6,281.9 205.9,278.3 207.1,276.4 208.4,276.4 209.7,273.8 211.0,279.9 212.3,278.9 213.6,286.4 214.8,287.1 216.1,286.4 217.4,287.2 218.7,285.7 220.0,257.2 221.2,255.3 222.5,254.4 223.8,278.4 225.1,279.3 226.4,279.1 227.7,279.3 228.9,283.7 230.2,281.7 231.5,283.7 232.8,281.3 234.1,280.1 235.3,279.2 236.6,278.9 237.9,283.1 239.2,282.4 240.5,287.0 241.7,288.2 243.0,287.1 244.3,283.6 245.6,283.3 246.9,281.4 248.2,285.7 249.4,285.0 250.7,278.9 252.0,275.4 253.3,273.2 254.6,273.3 255.8,277.0 257.1,279.6 258.4,276.5 259.7,279.3 261.0,282.5 262.3,284.0 263.5,283.0 264.8,282.6 266.1,285.9 267.4,282.9 268.7,283.0 269.9,281.4 271.2,284.5 272.5,283.1 273.8,285.8 275.1,284.1 276.4,284.2 277.6,284.1 278.9,287.1 280.2,285.9 281.5,280.4 282.8,277.7 284.0,276.5 285.3,283.4 286.6,284.9 287.9,281.1 289.2,280.5 290.5,270.5 291.7,267.3 293.0,270.9 294.3,277.0 295.6,282.8 296.9,284.0 298.1,282.7 299.4,282.8 300.7,284.1 302.0,289.2 303.3,289.8 304.6,289.7 305.8,280.1 307.1,280.0 308.4,273.6 309.7,273.7 311.0,272.7 312.2,261.3 313.5,267.3 314.8,271.7 316.1,273.1 317.4,279.9 318.7,280.1 319.9,278.7 321.2,279.3 322.5,280.4 323.8,284.7 325.1,289.2 326.3,288.7 327.6,288.9 328.9,285.3 330.2,280.7 331.5,281.0 332.8,278.7 334.0,281.0 335.3,279.9 336.6,283.7 337.9,283.7 339.2,284.2 340.4,287.5 341.7,287.9 343.0,287.0 344.3,284.0 345.6,284.2 346.8,280.4 348.1,277.7 349.4,270.8 350.7,271.3 352.0,273.2 353.3,282.0 354.5,284.2 355.8,284.4 357.1,286.4 358.4,283.5 359.7,285.0 360.9,273.3 362.2,277.1 363.5,269.6 364.8,274.2 366.1,277.4 367.4,272.5 368.6,278.7 369.9,279.2 371.2,277.5 372.5,282.9 373.8,282.2 375.0,286.4 376.3,285.5 377.6,283.5 378.9,282.8 380.2,280.8 381.5,283.8 382.7,282.7 384.0,285.9 385.3,282.3 386.6,280.5 387.9,281.7 389.1,281.6 390.4,286.8 391.7,286.5 393.0,283.9 394.3,283.8 395.6,281.9 396.8,283.3 398.1,283.3 399.4,280.5 400.7,282.6 402.0,277.5 403.2,275.3 404.5,279.1 405.8,274.3 407.1,279.4 408.4,283.7 409.7,276.1 410.9,280.4 412.2,277.6 413.5,277.2 414.8,282.9 416.1,284.0 417.3,288.0 418.6,287.2 419.9,286.2 421.2,282.7 422.5,282.8 423.8,282.9 425.0,284.7 426.3,285.5 427.6,286.0 428.9,285.6 430.2,280.5 431.4,278.5 432.7,276.8 434.0,278.4 435.3,279.4 436.6,282.7 437.9,280.8 439.1,284.3 440.4,283.3 441.7,287.6 443.0,287.5 444.3,287.6 445.5,288.6 446.8,286.9 448.1,286.5 449.4,287.3 450.7,286.0 451.9,286.5 453.2,285.2 454.5,281.4 455.8,282.4 457.1,274.7 458.4,271.1 459.6,272.0 460.9,276.0 462.2,284.7 463.5,287.5 464.8,284.6 466.0,284.3 467.3,279.9 468.6,279.3 469.9,279.3 471.2,276.6 472.5,278.6 473.7,281.9 475.0,281.8 476.3,284.6 477.6,285.7 478.9,286.2 480.1,283.8 481.4,283.9 482.7,282.7 484.0,285.8 485.3,283.9 486.6,283.8 487.8,283.2 489.1,278.2 490.4,282.5 491.7,279.6 493.0,282.4 494.2,281.0 495.5,274.8 496.8,271.4 498.1,267.5 499.4,276.6 500.7,276.3 501.9,281.1 503.2,279.0 504.5,283.0 505.8,281.7 507.1,286.0 508.3,287.1 509.6,287.0 510.9,283.0 512.2,283.5 513.5,284.7 514.8,273.4 516.0,275.0 517.3,275.1 518.6,280.6 519.9,282.8 521.2,280.9 522.4,279.8 523.7,281.8 525.0,283.9 526.3,279.5 527.6,280.4 528.9,283.6 530.1,280.0 531.4,282.9 532.7,280.5 534.0,277.9 535.3,279.7 536.5,278.2 537.8,281.7 539.1,277.8 540.4,284.0 541.7,282.8 543.0,277.1 544.2,281.8 545.5,281.5 546.8,284.4 548.1,287.9 549.4,286.8 550.6,287.6 551.9,285.2 553.2,284.9 554.5,285.5 555.8,283.9 557.0,280.5 558.3,269.5 559.6,273.7 560.9,273.9 562.2,279.6 563.5,276.4 564.7,274.4 566.0,268.8 567.3,258.2 568.6,268.1 569.9,260.5 571.1,274.8 572.4,279.7 573.7,280.0 575.0,285.9 576.3,285.2 577.6,285.7 578.8,286.6 580.1,287.3 581.4,287.1 582.7,287.4 584.0,283.5 585.2,280.4 586.5,276.4 587.8,279.6 589.1,278.9 590.4,282.0 591.7,285.1 592.9,279.8 594.2,279.7 595.5,279.9 596.8,284.8 598.1,286.1 599.3,285.8 600.6,284.0 601.9,283.1 603.2,276.6 604.5,281.0 605.8,280.5 607.0,277.8 608.3,283.8 609.6,283.0 610.9,285.7 612.2,286.1 613.4,287.5 614.7,287.7 616.0,284.0 617.3,283.3 618.6,283.1 619.9,286.8 621.1,286.2 622.4,286.2 623.7,284.0 625.0,282.3 626.3,282.5 627.5,280.2 628.8,276.4 630.1,274.7 631.4,277.5 632.7,277.5 634.0,283.1 635.2,280.0 636.5,280.2 637.8,283.6 639.1,282.8 640.4,283.9 641.6,284.0 642.9,287.1 644.2,286.3 645.5,286.8 646.8,284.7 648.1,274.9 649.3,276.5 650.6,277.3 651.9,280.5 653.2,286.4 654.5,286.2 655.7,286.6 657.0,284.7 658.3,283.3 659.6,277.4 660.9,278.0 662.1,276.6 663.4,275.6 664.7,279.6 666.0,280.7 667.3,283.0 668.6,280.3 669.8,279.7 671.1,274.0 672.4,282.2 673.7,280.8 675.0,284.3 676.2,286.2 677.5,285.6 678.8,285.8 680.1,282.2 681.4,280.8 682.7,279.9 683.9,277.9 685.2,282.4 686.5,282.0 687.8,281.2 689.1,283.8 690.3,283.1 691.6,282.1 692.9,282.9 694.2,282.9 695.5,284.5 696.8,284.0 698.0,284.8 699.3,283.9 700.6,284.6 701.9,282.1 703.2,282.8 704.4,281.4 705.7,285.5 707.0,281.5 708.3,275.3 709.6,274.8 710.9,277.2 712.1,282.3 713.4,282.1 714.7,278.6 716.0,284.1 717.3,280.5 718.5,277.2 719.8,276.1 721.1,279.2 722.4,283.8 723.7,285.5 725.0,285.6 726.2,282.8 727.5,278.3 728.8,279.1 730.1,278.1 731.4,286.3 732.6,286.1 733.9,282.2 735.2,282.5 736.5,280.8 737.8,279.6 739.1,279.5 740.3,280.7 741.6,285.8 742.9,284.8 744.2,283.3 745.5,280.2 746.7,277.9 748.0,277.8 749.3,278.4 750.6,284.1 751.9,286.4 753.2,285.3 754.4,286.4 755.7,285.6 757.0,285.6 758.3,278.6 759.6,272.2 760.8,241.6 762.1,243.3 763.4,252.7 764.7,255.5 766.0,282.7 767.2,282.0 768.5,282.6 769.8,283.8 771.1,283.4 772.4,284.0 773.7,284.7 774.9,275.1 776.2,266.2 777.5,267.0 778.8,266.1 780.1,278.0 781.3,286.1 782.6,282.4 783.9,283.5 785.2,279.6 786.5,283.1 787.8,279.6 789.0,281.2 790.3,280.0 791.6,281.7 792.9,277.0 794.2,266.3 795.4,269.9 796.7,277.7 798.0,273.6 799.3,283.4 800.6,283.4 801.9,287.5 803.1,285.2 804.4,287.0 805.7,283.1 807.0,281.0 808.3,277.4 809.5,278.2 810.8,276.0 812.1,282.5 813.4,283.3 814.7,280.3 816.0,274.0 817.2,274.8 818.5,276.5 819.8,282.3 821.1,279.5 822.4,280.4 823.6,274.8 824.9,279.0 826.2,281.1 827.5,280.2 828.8,279.4 830.1,277.6 831.3,279.4 832.6,280.5 833.9,284.7 835.2,284.4 836.5,285.9 837.7,287.4 839.0,286.9 840.3,286.4 841.6,287.4 842.9,283.1 844.2,284.0 845.4,282.7 846.7,282.8 848.0,284.6 849.3,283.0 850.6,280.0 851.8,278.7 853.1,271.3 854.4,269.1 855.7,268.2 857.0,276.7 858.3,279.6 859.5,283.0 860.8,280.1 862.1,277.5 863.4,278.2 864.7,283.1 865.9,282.2 867.2,283.5 868.5,281.0 869.8,282.4 871.1,277.9 872.3,277.0 873.6,272.5 874.9,271.9 876.2,275.9 877.5,283.4 878.8,282.1 880.0,272.7 881.3,267.2 882.6,260.7 883.9,276.2 885.2,273.7 886.4,269.8 887.7,276.3 889.0,276.4 890.3,275.3 891.6,271.9 892.9,273.8 894.1,273.3 895.4,278.4 896.7,280.2 898.0,280.0 899.3,282.6 900.5,285.2 901.8,280.0 903.1,276.0 904.4,276.4 905.7,280.0 907.0,283.3 908.2,286.6 909.5,282.3 910.8,282.6 912.1,281.4 913.4,282.2 914.6,284.7 915.9,287.5 917.2,283.7 918.5,282.7 919.8,282.4 921.1,279.0 922.3,281.3 923.6,277.7 924.9,279.3 926.2,278.9 927.5,280.9 928.7,286.4 930.0,285.7 931.3,281.4 932.6,278.8 933.9,278.3 935.2,280.1 936.4,282.1 937.7,279.5 939.0,280.0 940.3,280.9 941.6,273.7 942.8,276.8 944.1,280.4 945.4,282.6 946.7,281.8 948.0,277.1 949.3,276.3 950.5,277.7 951.8,279.7 953.1,281.7 954.4,283.7 955.7,282.5 956.9,286.2 958.2,283.1 959.5,276.3 960.8,276.7 962.1,278.9 963.4,286.9 964.6,285.3 965.9,282.5 967.2,282.9 968.5,283.0 969.8,286.4 971.0,286.8 972.3,283.6 973.6,282.7 974.9,283.3 976.2,285.6 977.4,286.3 978.7,286.7 980.0,285.6 981.3,286.8 982.6,284.4 983.9,282.7 985.1,283.5 986.4,283.3 987.7,285.5 989.0,285.5 990.3,285.8 991.5,285.7 992.8,285.4 994.1,285.2 995.4,283.0 996.7,280.1 998.0,279.9 999.2,280.1 1000.5,280.7 1001.8,278.1 1003.1,275.3 1004.4,274.5 1005.6,279.8 1006.9,282.9 1008.2,282.4 1009.5,283.5 1010.8,283.8 1012.1,284.1 1013.3,285.2 1014.6,282.7 1015.9,281.8 1017.2,278.9 1018.5,283.1 1019.7,280.6 1021.0,278.9 1022.3,280.8 1023.6,281.5 1024.9,276.0 1026.2,281.4 1027.4,273.2 1028.7,270.6 1030.0,273.1' class='line-a'/>
+<text x='70' y='24' class='svg-label'>ICMP: 1500 muestras, linea suavizada</text>
+<polyline points='70.0,239.0 73.2,241.3 76.4,243.9 79.6,246.1 82.8,257.8 86.1,256.6 89.3,257.8 92.5,256.6 95.7,257.4 98.9,258.5 102.1,258.5 105.3,258.1 108.5,258.6 111.7,257.6 114.9,258.7 118.2,257.7 121.4,256.8 124.6,257.2 127.8,257.9 131.0,257.3 134.2,258.3 137.4,257.4 140.6,262.1 143.8,259.5 147.1,257.5 150.3,258.1 153.5,257.7 156.7,258.5 159.9,258.3 163.1,254.0 166.3,258.3 169.5,260.3 172.7,260.9 176.0,261.3 179.2,259.1 182.4,261.3 185.6,260.7 188.8,257.7 192.0,258.6 195.2,257.4 198.4,258.5 201.6,258.4 204.8,258.7 208.1,257.9 211.3,259.8 214.5,262.2 217.7,261.2 220.9,260.6 224.1,260.0 227.3,259.1 230.5,262.4 233.7,261.0 237.0,257.8 240.2,257.4 243.4,257.5 246.6,258.8 249.8,258.1 253.0,257.6 256.2,258.8 259.4,256.5 262.6,258.6 265.9,259.3 269.1,261.9 272.3,261.4 275.5,261.2 278.7,260.0 281.9,262.7 285.1,260.8 288.3,259.1 291.5,257.2 294.7,257.5 298.0,256.1 301.2,257.8 304.4,256.7 307.6,258.1 310.8,258.8 314.0,262.0 317.2,261.0 320.4,262.7 323.6,265.6 326.9,264.3 330.1,264.2 333.3,263.6 336.5,260.0 339.7,262.2 342.9,259.8 346.1,255.6 349.3,258.8 352.5,257.2 355.8,248.7 359.0,247.0 362.2,246.6 365.4,249.8 368.6,248.8 371.8,247.7 375.0,249.2 378.2,260.4 381.4,262.6 384.6,262.7 387.9,260.0 391.1,262.3 394.3,262.3 397.5,259.3 400.7,255.9 403.9,254.5 407.1,254.2 410.3,255.6 413.5,247.1 416.8,246.7 420.0,250.1 423.2,256.3 426.4,256.4 429.6,254.8 432.8,256.2 436.0,263.4 439.2,267.1 442.4,268.6 445.7,264.0 448.9,262.5 452.1,263.7 455.3,263.7 458.5,264.1 461.7,260.1 464.9,254.6 468.1,250.4 471.3,253.8 474.5,245.6 477.8,245.9 481.0,244.6 484.2,244.7 487.4,248.3 490.6,252.7 493.8,251.6 497.0,260.3 500.2,257.7 503.4,260.3 506.7,259.2 509.9,258.1 513.1,258.2 516.3,258.1 519.5,254.3 522.7,255.0 525.9,253.4 529.1,254.6 532.3,255.3 535.6,257.6 538.8,257.0 542.0,261.4 545.2,260.7 548.4,259.8 551.6,260.2 554.8,259.8 558.0,258.0 561.2,250.2 564.4,250.3 567.7,249.5 570.9,252.4 574.1,254.7 577.3,253.9 580.5,250.5 583.7,259.6 586.9,256.8 590.1,258.5 593.3,257.1 596.6,254.3 599.8,255.3 603.0,257.4 606.2,250.4 609.4,248.6 612.6,249.3 615.8,248.1 619.0,248.1 622.2,247.3 625.5,248.8 628.7,256.1 631.9,259.3 635.1,257.7 638.3,258.9 641.5,257.5 644.7,260.0 647.9,261.7 651.1,259.6 654.3,260.9 657.6,259.0 660.8,260.4 664.0,261.5 667.2,259.7 670.4,257.8 673.6,256.9 676.8,257.6 680.0,262.4 683.2,260.8 686.5,259.7 689.7,258.0 692.9,256.8 696.1,258.0 699.3,257.2 702.5,254.5 705.7,254.9 708.9,256.8 712.1,257.9 715.4,259.4 718.6,255.2 721.8,255.9 725.0,259.3 728.2,258.7 731.4,258.8 734.6,259.1 737.8,256.7 741.0,259.3 744.2,258.0 747.5,257.8 750.7,259.3 753.9,260.1 757.1,260.8 760.3,263.9 763.5,268.1 766.7,267.6 769.9,268.1 773.1,266.5 776.4,265.5 779.6,265.8 782.8,255.3 786.0,255.2 789.2,254.5 792.4,252.4 795.6,253.7 798.8,251.4 802.0,251.5 805.3,260.4 808.5,258.3 811.7,260.3 814.9,257.2 818.1,254.0 821.3,254.9 824.5,254.5 827.7,255.9 830.9,255.9 834.1,255.5 837.4,260.0 840.6,263.9 843.8,267.2 847.0,266.7 850.2,266.9 853.4,269.4 856.6,268.5 859.8,264.1 863.0,264.2 866.3,261.3 869.5,260.2 872.7,259.5 875.9,254.8 879.1,253.7 882.3,256.5 885.5,254.0 888.7,255.0 891.9,255.4 895.2,255.6 898.4,258.3 901.6,259.5 904.8,257.3 908.0,258.8 911.2,259.5 914.4,259.8 917.6,259.3 920.8,258.8 924.0,257.4 927.3,259.7 930.5,258.9 933.7,257.0 936.9,258.6 940.1,257.7 943.3,257.3 946.5,258.6 949.7,257.4 952.9,259.0 956.2,259.8 959.4,261.7 962.6,263.9 965.8,264.3 969.0,266.0 972.2,267.8 975.4,270.3 978.6,270.1 981.8,268.4 985.1,267.8 988.3,266.9 991.5,269.4 994.7,267.2 997.9,262.1 1001.1,263.1 1004.3,261.7 1007.5,260.9 1010.7,262.6 1013.9,260.8 1017.2,261.1 1020.4,262.1 1023.6,261.4 1026.8,262.2 1030.0,263.1' class='line-b'/>
+<text x='70' y='42' class='svg-label'>TCP_CONNECT: 300 muestras, linea suavizada</text>
+<text x='70' y='370' class='svg-label'>Cada servicio se normaliza a todo el ancho del grafico. Eje Y: latencia en ms. Rango 0.927 a 12.713 ms.</text>
+</svg>
+<table><thead><tr><th>service</th><th>n</th><th>min_ms</th><th>q1_ms</th><th>median_ms</th><th>mean_ms</th><th>q3_ms</th><th>p95_ms</th><th>p99_ms</th><th>max_ms</th><th>ci95_low_ms</th><th>ci95_high_ms</th></tr></thead><tbody><tr><td>ICMP</td><td>1500</td><td>1.740</td><td>2.510</td><td>2.670</td><td>2.826</td><td>2.960</td><td>3.700</td><td>4.740</td><td>11.900</td><td>2.795</td><td>2.856</td></tr><tr><td>TCP_CONNECT</td><td>300</td><td>2.472</td><td>3.506</td><td>3.748</td><td>3.796</td><td>4.033</td><td>4.564</td><td>6.232</td><td>7.274</td><td>3.730</td><td>3.861</td></tr></tbody></table>
+
+<h2>5. Rendimiento de CPU</h2>
+<p>Las barras muestran CPU promedio por proceso. La linea muestra el acumulado de CPU conforme se agregan los procesos de mayor consumo.</p>
+<h3>CPU por proceso y CPU acumulada</h3>
+<svg viewBox='0 0 920 360' role='img' aria-label='CPU por proceso y acumulada'>
+<line x1='70' y1='260' x2='870' y2='260' class='axis'/>
+<line x1='70' y1='40' x2='70' y2='260' class='axis'/>
+<rect x='86.8' y='131.5' width='46.4' height='128.5' class='bar-cpu'></rect>
+<text x='110.0' y='302' class='svg-label rotate' transform='rotate(35 110.0,302)'>node-red</text>
+<text x='86.8' y='125.5' class='svg-value'>34.953%</text>
+<rect x='166.8' y='245.3' width='46.4' height='14.7' class='bar-cpu'></rect>
+<text x='190.0' y='302' class='svg-label rotate' transform='rotate(35 190.0,302)'>pg_isready</text>
+<text x='166.8' y='239.3' class='svg-value'>4.000%</text>
+<rect x='246.8' y='247.1' width='46.4' height='12.9' class='bar-cpu'></rect>
+<text x='270.0' y='302' class='svg-label rotate' transform='rotate(35 270.0,302)'>tshark</text>
+<text x='246.8' y='241.1' class='svg-value'>3.520%</text>
+<rect x='326.8' y='248.9' width='46.4' height='11.1' class='bar-cpu'></rect>
+<text x='350.0' y='302' class='svg-label rotate' transform='rotate(35 350.0,302)'>kcompactd0</text>
+<text x='326.8' y='242.9' class='svg-value'>3.010%</text>
+<rect x='406.8' y='249.0' width='46.4' height='11.0' class='bar-cpu'></rect>
+<text x='430.0' y='302' class='svg-label rotate' transform='rotate(35 430.0,302)'>wget</text>
+<text x='406.8' y='243.0' class='svg-value'>3.000%</text>
+<rect x='486.8' y='249.0' width='46.4' height='11.0' class='bar-cpu'></rect>
+<text x='510.0' y='302' class='svg-label rotate' transform='rotate(35 510.0,302)'>pidstat</text>
+<text x='486.8' y='243.0' class='svg-value'>2.993%</text>
+<rect x='566.8' y='250.0' width='46.4' height='10.0' class='bar-cpu'></rect>
+<text x='590.0' y='302' class='svg-label rotate' transform='rotate(35 590.0,302)'>wazuh-agentd</text>
+<text x='566.8' y='244.0' class='svg-value'>2.708%</text>
+<rect x='646.8' y='250.2' width='46.4' height='9.8' class='bar-cpu'></rect>
+<text x='670.0' y='302' class='svg-label rotate' transform='rotate(35 670.0,302)'>grafana</text>
+<text x='646.8' y='244.2' class='svg-value'>2.676%</text>
+<rect x='726.8' y='254.5' width='46.4' height='5.5' class='bar-cpu'></rect>
+<text x='750.0' y='302' class='svg-label rotate' transform='rotate(35 750.0,302)'>dockerd</text>
+<text x='726.8' y='248.5' class='svg-value'>1.505%</text>
+<rect x='806.8' y='254.5' width='46.4' height='5.5' class='bar-cpu'></rect>
+<text x='830.0' y='302' class='svg-label rotate' transform='rotate(35 830.0,302)'>openvpn</text>
+<text x='806.8' y='248.5' class='svg-value'>1.498%</text>
+<polyline points='110.0,131.5 190.0,116.8 270.0,103.9 350.0,92.8 430.0,81.8 510.0,70.8 590.0,60.9 670.0,51.0 750.0,45.5 830.0,40.0' class='line-total'/>
+<circle cx='110.0' cy='131.5' r='4' class='point-total'/>
+<circle cx='190.0' cy='116.8' r='4' class='point-total'/>
+<circle cx='270.0' cy='103.9' r='4' class='point-total'/>
+<circle cx='350.0' cy='92.8' r='4' class='point-total'/>
+<circle cx='430.0' cy='81.8' r='4' class='point-total'/>
+<circle cx='510.0' cy='70.8' r='4' class='point-total'/>
+<circle cx='590.0' cy='60.9' r='4' class='point-total'/>
+<circle cx='670.0' cy='51.0' r='4' class='point-total'/>
+<circle cx='750.0' cy='45.5' r='4' class='point-total'/>
+<circle cx='830.0' cy='40.0' r='4' class='point-total'/>
+<text x='70' y='25' class='svg-label'>Barras: %CPU por proceso. Linea: %CPU acumulado.</text>
+</svg>
+<table><thead><tr><th>rank</th><th>process</th><th>avg_cpu_pct</th><th>cumulative_cpu_pct</th><th>samples</th><th>source_file</th></tr></thead><tbody><tr><td>1</td><td>node-red</td><td>34.953</td><td>34.953</td><td>301</td><td>raw/pidstat_all.log</td></tr><tr><td>2</td><td>pg_isready</td><td>4.000</td><td>38.953</td><td>1</td><td>raw/pidstat_all.log</td></tr><tr><td>3</td><td>tshark</td><td>3.520</td><td>42.473</td><td>10</td><td>raw/pidstat_all.log</td></tr><tr><td>4</td><td>kcompactd0</td><td>3.010</td><td>45.483</td><td>11</td><td>raw/pidstat_all.log</td></tr><tr><td>5</td><td>wget</td><td>3.000</td><td>48.483</td><td>1</td><td>raw/pidstat_all.log</td></tr><tr><td>6</td><td>pidstat</td><td>2.993</td><td>51.476</td><td>301</td><td>raw/pidstat_all.log</td></tr><tr><td>7</td><td>wazuh-agentd</td><td>2.708</td><td>54.184</td><td>80</td><td>raw/pidstat_all.log</td></tr><tr><td>8</td><td>grafana</td><td>2.676</td><td>56.860</td><td>301</td><td>raw/pidstat_all.log</td></tr><tr><td>9</td><td>dockerd</td><td>1.505</td><td>58.365</td><td>92</td><td>raw/pidstat_all.log</td></tr><tr><td>10</td><td>openvpn</td><td>1.498</td><td>59.862</td><td>280</td><td>raw/pidstat_all.log</td></tr><tr><td>11</td><td>postgres</td><td>1.482</td><td>61.345</td><td>1021</td><td>raw/pidstat_all.log</td></tr><tr><td>12</td><td>wazuh-logcollec</td><td>1.459</td><td>62.803</td><td>66</td><td>raw/pidstat_all.log</td></tr></tbody></table>
+
+<h2>6. Trafico total de interfaz</h2>
+<p>Este grafico sirve para validar si la interfaz seleccionada realmente movio trafico durante la corrida.</p>
+<h3>Delta de trafico en la interfaz</h3>
+<svg viewBox='0 0 920 231' role='img' aria-label='Delta de trafico en la interfaz'>
+<line x1='260' y1='24' x2='830' y2='24' class='axis'/>
+<text x='12' y='60' class='svg-label'>TX packets</text>
+<rect x='260' y='42' width='2.0' height='26' rx='5' class='bar'></rect>
+<text x='272.0' y='60' class='svg-value'>0.000 </text>
+<text x='12' y='104' class='svg-label'>RX packets</text>
+<rect x='260' y='86' width='2.0' height='26' rx='5' class='bar'></rect>
+<text x='272.0' y='104' class='svg-value'>0.000 </text>
+<text x='12' y='148' class='svg-label'>TX bytes</text>
+<rect x='260' y='130' width='2.0' height='26' rx='5' class='bar'></rect>
+<text x='272.0' y='148' class='svg-value'>0.000 </text>
+<text x='12' y='192' class='svg-label'>RX bytes</text>
+<rect x='260' y='174' width='2.0' height='26' rx='5' class='bar'></rect>
+<text x='272.0' y='192' class='svg-value'>0.000 </text>
+</svg>
+<table><thead><tr><th>iface</th><th>tx_packets_delta</th><th>rx_packets_delta</th><th>tx_bytes_delta</th><th>rx_bytes_delta</th><th>source_file</th></tr></thead><tbody><tr><td>tun0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>raw/ip_s_link_before.log;raw/ip_s_link_after.log</td></tr></tbody></table>
+
+<h2>7. Graficas adicionales para comparar pruebas</h2>
+<p>Estas graficas ya se generan en el HTML. Si una aparece sin datos, significa que esa prueba no produjo evidencia suficiente o no fue ejecutada en esa corrida.</p>
+<h3>Salud del servicio TCP</h3>
+<svg viewBox='0 0 920 319' role='img' aria-label='Salud del servicio TCP'>
+<line x1='260' y1='24' x2='830' y2='24' class='axis'/>
+<text x='12' y='60' class='svg-label'>Exito TCP connect (%)</text>
+<rect x='260' y='42' width='520.0' height='26' rx='5' class='bar'></rect>
+<text x='790.0' y='60' class='svg-value'>100.00 </text>
+<text x='12' y='104' class='svg-label'>TCP connect promedio (ms)</text>
+<rect x='260' y='86' width='19.7' height='26' rx='5' class='bar'></rect>
+<text x='289.7' y='104' class='svg-value'>3.796 </text>
+<text x='12' y='148' class='svg-label'>TCP connect mediana (ms)</text>
+<rect x='260' y='130' width='19.5' height='26' rx='5' class='bar'></rect>
+<text x='289.5' y='148' class='svg-value'>3.748 </text>
+<text x='12' y='192' class='svg-label'>TCP connect p95 (ms)</text>
+<rect x='260' y='174' width='23.7' height='26' rx='5' class='bar'></rect>
+<text x='293.7' y='192' class='svg-value'>4.564 </text>
+<text x='12' y='236' class='svg-label'>TCP connect p99 (ms)</text>
+<rect x='260' y='218' width='32.4' height='26' rx='5' class='bar'></rect>
+<text x='302.4' y='236' class='svg-value'>6.232 </text>
+<text x='12' y='280' class='svg-label'>TCP connect maximo (ms)</text>
+<rect x='260' y='262' width='37.8' height='26' rx='5' class='bar'></rect>
+<text x='307.8' y='280' class='svg-value'>7.274 </text>
+</svg>
+<table><thead><tr><th>label</th><th>metric</th><th>value</th><th>unit</th><th>source_file</th></tr></thead><tbody><tr><td>Exito TCP connect</td><td>tcp_connect_success_rate</td><td>100.00</td><td>%</td><td>csv/tcp_connect_stats.csv</td></tr><tr><td>TCP connect promedio</td><td>tcp_connect_avg</td><td>3.796</td><td>ms</td><td>csv/tcp_connect_stats.csv</td></tr><tr><td>TCP connect mediana</td><td>tcp_connect_median</td><td>3.748</td><td>ms</td><td>csv/tcp_connect_stats.csv</td></tr><tr><td>TCP connect p95</td><td>tcp_connect_p95</td><td>4.564</td><td>ms</td><td>csv/tcp_connect_stats.csv</td></tr><tr><td>TCP connect p99</td><td>tcp_connect_p99</td><td>6.232</td><td>ms</td><td>csv/tcp_connect_stats.csv</td></tr><tr><td>TCP connect maximo</td><td>tcp_connect_max</td><td>7.274</td><td>ms</td><td>csv/tcp_connect_stats.csv</td></tr></tbody></table>
+<h3>PMTU y perdida</h3>
+<svg viewBox='0 0 920 187' role='img' aria-label='PMTU y perdida'>
+<line x1='260' y1='24' x2='830' y2='24' class='axis'/>
+<text x='12' y='60' class='svg-label'>Payload ICMP maximo sin fragmentar (bytes_icmp_payload)</text>
+<rect x='260' y='42' width='510.3' height='26' rx='5' class='bar'></rect>
+<text x='780.3' y='60' class='svg-value'>1472.00 </text>
+<text x='12' y='104' class='svg-label'>PMTU IPv4 aproximada (bytes)</text>
+<rect x='260' y='86' width='520.0' height='26' rx='5' class='bar'></rect>
+<text x='790.0' y='104' class='svg-value'>1500.00 </text>
+<text x='12' y='148' class='svg-label'>Perdida ICMP (%)</text>
+<rect x='260' y='130' width='2.0' height='26' rx='5' class='bar'></rect>
+<text x='272.0' y='148' class='svg-value'>0.000 </text>
+</svg>
+<table><thead><tr><th>label</th><th>metric</th><th>value</th><th>unit</th><th>source_file</th></tr></thead><tbody><tr><td>Payload ICMP maximo sin fragmentar</td><td>pmtu_payload_max_success</td><td>1472.00</td><td>bytes_icmp_payload</td><td>raw/pmtu_ping_M_do.log</td></tr><tr><td>PMTU IPv4 aproximada</td><td>pmtu_ipv4_approx</td><td>1500.00</td><td>bytes</td><td>raw/pmtu_ping_M_do.log</td></tr><tr><td>Perdida ICMP</td><td>icmp_packet_loss</td><td>0.000</td><td>%</td><td>raw/ping_PRIVATE_IP_022.log</td></tr></tbody></table>
+<h3>Tasas promedio de red en la interfaz</h3>
+<svg viewBox='0 0 920 275' role='img' aria-label='Tasas promedio de red en la interfaz'>
+<line x1='260' y1='24' x2='830' y2='24' class='axis'/>
+<text x='12' y='60' class='svg-label'>net_rxpck_s (packets/s)</text>
+<rect x='260' y='42' width='379.0' height='26' rx='5' class='bar'></rect>
+<text x='649.0' y='60' class='svg-value'>26.780 </text>
+<text x='12' y='104' class='svg-label'>net_txpck_s (packets/s)</text>
+<rect x='260' y='86' width='520.0' height='26' rx='5' class='bar'></rect>
+<text x='790.0' y='104' class='svg-value'>36.740 </text>
+<text x='12' y='148' class='svg-label'>Recepcion promedio (kB/s)</text>
+<rect x='260' y='130' width='35.4' height='26' rx='5' class='bar'></rect>
+<text x='305.4' y='148' class='svg-value'>2.500 </text>
+<text x='12' y='192' class='svg-label'>Transmision promedio (kB/s)</text>
+<rect x='260' y='174' width='27.0' height='26' rx='5' class='bar'></rect>
+<text x='297.0' y='192' class='svg-value'>1.905 </text>
+<text x='12' y='236' class='svg-label'>Utilizacion de interfaz (%)</text>
+<rect x='260' y='218' width='2.0' height='26' rx='5' class='bar'></rect>
+<text x='272.0' y='236' class='svg-value'>0.000 </text>
+</svg>
+<table><thead><tr><th>label</th><th>metric</th><th>value</th><th>unit</th><th>source_file</th></tr></thead><tbody><tr><td>net_rxpck_s</td><td>net_rxpck_s</td><td>26.780</td><td>packets/s</td><td>raw/sar_net_dev.log</td></tr><tr><td>net_txpck_s</td><td>net_txpck_s</td><td>36.740</td><td>packets/s</td><td>raw/sar_net_dev.log</td></tr><tr><td>Recepcion promedio</td><td>net_rx_kBps</td><td>2.500</td><td>kB/s</td><td>raw/sar_net_dev.log</td></tr><tr><td>Transmision promedio</td><td>net_tx_kBps</td><td>1.905</td><td>kB/s</td><td>raw/sar_net_dev.log</td></tr><tr><td>Utilizacion de interfaz</td><td>net_ifutil_pct</td><td>0.000</td><td>%</td><td>raw/sar_net_dev.log</td></tr></tbody></table>
+<p class='muted'>No hay datos iperf3 porque no se ejecuto --iperf-server o no hubo servidor iperf3 autorizado.</p>
+<h3>Throughput criptografico local openssl</h3>
+<svg viewBox='0 0 920 187' role='img' aria-label='Throughput criptografico local openssl'>
+<line x1='260' y1='24' x2='830' y2='24' class='axis'/>
+<text x='12' y='60' class='svg-label'>aes_128_gcm</text>
+<rect x='260' y='42' width='520.0' height='26' rx='5' class='bar'></rect>
+<text x='790.0' y='60' class='svg-value'>6.32e+07 kB/s</text>
+<text x='12' y='104' class='svg-label'>aes_256_gcm</text>
+<rect x='260' y='86' width='462.4' height='26' rx='5' class='bar'></rect>
+<text x='732.4' y='104' class='svg-value'>5.62e+07 kB/s</text>
+<text x='12' y='148' class='svg-label'>chacha20_poly1305</text>
+<rect x='260' y='130' width='320.1' height='26' rx='5' class='bar'></rect>
+<text x='590.1' y='148' class='svg-value'>3.89e+07 kB/s</text>
+</svg>
+<table><thead><tr><th>algorithm</th><th>throughput_kBps</th><th>source_file</th><th>notes</th></tr></thead><tbody><tr><td>aes_128_gcm</td><td>6.32e+07</td><td>raw/openssl_speed_aes_128_gcm.log</td><td>Mayor valor de throughput reportado por openssl speed; unidad original aproximada kB/s.</td></tr><tr><td>aes_256_gcm</td><td>5.62e+07</td><td>raw/openssl_speed_aes_256_gcm.log</td><td>Mayor valor de throughput reportado por openssl speed; unidad original aproximada kB/s.</td></tr><tr><td>chacha20_poly1305</td><td>3.89e+07</td><td>raw/openssl_speed_chacha20_poly1305.log</td><td>Mayor valor de throughput reportado por openssl speed; unidad original aproximada kB/s.</td></tr></tbody></table>
+
+<h2>8. Archivos de salida principales</h2>
+<ul>
+  <li><code>csv/probe_dataset.csv</code>: CSV maestro consolidado.</li>
+  <li><code>csv/probe_interpretation.csv</code>: lectura tecnica automatica.</li>
+  <li><code>csv/packet_service_counts.csv</code>: paquetes por servicio.</li>
+  <li><code>csv/latency_samples.csv</code>: muestras de latencia.</li>
+  <li><code>csv/latency_stats.csv</code>: estadisticos para boxplot e IC95.</li>
+  <li><code>csv/cpu_process_summary.csv</code>: CPU por proceso y acumulado.</li>
+  <li><code>csv/interface_delta.csv</code>: paquetes y bytes TX/RX de la interfaz.</li>
+</ul>
+<p>Tipos de registros en el CSV maestro:</p>
+<ul><li><strong>cpu_process</strong>: 12</li><li><strong>file_inventory</strong>: 38</li><li><strong>interface_delta</strong>: 1</li><li><strong>latency_sample</strong>: 1800</li><li><strong>latency_stats</strong>: 2</li><li><strong>metric</strong>: 31</li><li><strong>packet_count</strong>: 6</li></ul>
+
+<h2>9. Notas y advertencias</h2>
+<pre>Sin notas registradas.</pre>
+</body>
+</html>

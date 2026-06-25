@@ -1,0 +1,13 @@
+run_id,scenario,target,iface,rank,process,avg_cpu_pct,cumulative_cpu_pct,samples,source_file
+baseline_1h_PRIVATE_IP_022_20260624_160330,baseline_1h,PRIVATE_IP_022,tun0,1,node-red,37.150,37.150,3601,raw/pidstat_all.log
+baseline_1h_PRIVATE_IP_022_20260624_160330,baseline_1h,PRIVATE_IP_022,tun0,2,landscape-sysin,22.500,59.650,2,raw/pidstat_all.log
+baseline_1h_PRIVATE_IP_022_20260624_160330,baseline_1h,PRIVATE_IP_022,tun0,3,pg_isready,3.500,63.150,2,raw/pidstat_all.log
+baseline_1h_PRIVATE_IP_022_20260624_160330,baseline_1h,PRIVATE_IP_022,tun0,4,wget,3.167,66.316,6,raw/pidstat_all.log
+baseline_1h_PRIVATE_IP_022_20260624_160330,baseline_1h,PRIVATE_IP_022,tun0,5,pidstat,2.950,69.267,3601,raw/pidstat_all.log
+baseline_1h_PRIVATE_IP_022_20260624_160330,baseline_1h,PRIVATE_IP_022,tun0,6,grafana,2.642,71.909,3601,raw/pidstat_all.log
+baseline_1h_PRIVATE_IP_022_20260624_160330,baseline_1h,PRIVATE_IP_022,tun0,7,wazuh-agentd,2.373,74.282,1162,raw/pidstat_all.log
+baseline_1h_PRIVATE_IP_022_20260624_160330,baseline_1h,PRIVATE_IP_022,tun0,8,kcompactd0,2.232,76.514,112,raw/pidstat_all.log
+baseline_1h_PRIVATE_IP_022_20260624_160330,baseline_1h,PRIVATE_IP_022,tun0,9,wazuh-modulesd,2.094,78.609,96,raw/pidstat_all.log
+baseline_1h_PRIVATE_IP_022_20260624_160330,baseline_1h,PRIVATE_IP_022,tun0,10,ssl_client,2.000,80.609,3,raw/pidstat_all.log
+baseline_1h_PRIVATE_IP_022_20260624_160330,baseline_1h,PRIVATE_IP_022,tun0,11,(openvpn),1.714,82.323,7,raw/pidstat_all.log
+baseline_1h_PRIVATE_IP_022_20260624_160330,baseline_1h,PRIVATE_IP_022,tun0,12,postgres,1.598,83.921,12738,raw/pidstat_all.log

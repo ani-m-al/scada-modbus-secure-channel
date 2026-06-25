@@ -1,0 +1,7 @@
+# Redacted artifact placeholder
+
+Original path redacted: Bridge/scada_probe_sh/bridge_PRIVATE_IP_022_20260616_172248/pcap/bridge_PRIVATE_IP_022_502_tun0.pcapng
+Original size bytes: 3675692
+Reason: raw capture, binary, archive, credential-like, or payload artifact redacted
+
+The original artifact is not included because it may expose sensitive network, host, packet, credential, or generated dependency data. See SANITIZATION_MANIFEST.csv for the inventory.

@@ -1,0 +1,4 @@
+run_id,scenario,target,iface,metric,label,value,unit,source_file,notes
+bridge_PRIVATE_IP_022_20260616_172248,bridge,PRIVATE_IP_022,tun0,pmtu_payload_max_success,Payload ICMP maximo sin fragmentar,1472.00,bytes_icmp_payload,raw/pmtu_ping_M_do.log,Mayor payload ICMP exitoso en lista fija.
+bridge_PRIVATE_IP_022_20260616_172248,bridge,PRIVATE_IP_022,tun0,pmtu_ipv4_approx,PMTU IPv4 aproximada,1500.00,bytes,raw/pmtu_ping_M_do.log,Aproximacion IPv4: payload + 28 bytes.
+bridge_PRIVATE_IP_022_20260616_172248,bridge,PRIVATE_IP_022,tun0,icmp_packet_loss,Perdida ICMP,0.000,%,raw/ping_PRIVATE_IP_022.log,

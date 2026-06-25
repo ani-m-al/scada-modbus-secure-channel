@@ -1,0 +1,27 @@
+server_ip,unit_id,function_base,function_name,direction,adu_count,adu_bytes,tcp_payload_bytes
+PRIVATE_IP_017,1,3,Exception of Read Holding Registers,Response,250,2250,2250
+PRIVATE_IP_017,1,3,Read Holding Registers,Query,250,3000,3000
+PRIVATE_IP_018,1,3,Read Holding Registers,Query,749,8988,8988
+PRIVATE_IP_018,1,3,Read Holding Registers,Response,750,107250,107250
+PRIVATE_IP_019,1,3,Read Holding Registers,Query,749,8988,8988
+PRIVATE_IP_019,1,3,Read Holding Registers,Response,749,107041,107041
+PRIVATE_IP_020,1,3,Read Holding Registers,Query,749,8988,8988
+PRIVATE_IP_020,1,3,Read Holding Registers,Response,749,144541,144541
+PRIVATE_IP_021,1,3,Read Holding Registers,Query,499,5988,5988
+PRIVATE_IP_021,1,3,Read Holding Registers,Response,499,104291,104291
+PRIVATE_IP_022,1,3,Read Holding Registers,Query,997,11964,11964
+PRIVATE_IP_022,1,3,Read Holding Registers,Response,997,84819,84819
+PRIVATE_IP_023,1,3,Read Holding Registers,Query,249,2988,2988
+PRIVATE_IP_023,1,3,Read Holding Registers,Response,249,20169,20169
+PRIVATE_IP_026,1,4,Read Input Registers,Query,499,5988,5988
+PRIVATE_IP_026,1,4,Read Input Registers,Response,499,34431,34431
+PRIVATE_IP_010,1,3,Read Holding Registers,Query,249,2988,2988
+PRIVATE_IP_010,1,3,Read Holding Registers,Response,249,13197,13197
+PRIVATE_IP_013,1,3,Read Holding Registers,Query,250,3000,3000
+PRIVATE_IP_013,1,3,Read Holding Registers,Response,250,13250,13250
+PRIVATE_IP_014,1,3,Read Holding Registers,Query,249,2988,2988
+PRIVATE_IP_014,1,3,Read Holding Registers,Response,249,13197,13197
+PRIVATE_IP_015,1,3,Read Holding Registers,Query,249,2988,2988
+PRIVATE_IP_015,1,3,Read Holding Registers,Response,249,13197,13197
+PRIVATE_IP_016,1,3,Read Holding Registers,Query,1995,23940,23940
+PRIVATE_IP_016,1,3,Read Holding Registers,Response,1995,251485,251485

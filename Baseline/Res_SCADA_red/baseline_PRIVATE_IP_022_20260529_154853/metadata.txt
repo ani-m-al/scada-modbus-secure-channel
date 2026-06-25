@@ -1,0 +1,144 @@
+script_version=0.1
+scenario_label=baseline
+target=PRIVATE_IP_022
+port=502
+iface=tun0
+duration_seconds=500
+interval_seconds=1
+ping_interval_seconds=0.2
+ping_size_bytes=56
+iperf_server=
+pid_to_monitor=
+start_time=2026-05-29T15:48:53-0500
+
+## Host
+ Static hostname: ubuntu
+       Icon name: computer-vm
+         Chassis: vm 🖴
+      Machine ID: e0f8e31508ff400893c2aac3266e7c54
+         Boot ID: eea2c30700d14a758b6a2408570b7bfb
+  Virtualization: vmware
+Operating System: Ubuntu 24.04.4 LTS
+          Kernel: Linux 6.8.0-55-generic
+    Architecture: x86-64
+ Hardware Vendor: VMware, Inc.
+  Hardware Model: VMware Virtual Platform
+Firmware Version: 6.00
+   Firmware Date: Thu 2020-11-12
+    Firmware Age: 5y 6month 2w 1d
+
+## Kernel
+Linux ubuntu 6.8.0-55-generic #57-Ubuntu SMP PREEMPT_DYNAMIC Wed Feb 12 23:42:21 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+
+## Date
+2026-05-29T15:48:54,119785277-05:00
+
+## Time sync
+               Local time: vie 2026-05-29 15:48:54 -05
+           Universal time: vie 2026-05-29 20:48:54 UTC
+                 RTC time: vie 2026-05-29 20:49:37
+                Time zone: America/Guayaquil (-05, -0500)
+System clock synchronized: no
+              NTP service: active
+          RTC in local TZ: no
+
+## Route to target
+PRIVATE_IP_022 via PRIVATE_IP_002 dev tun0 src PRIVATE_IP_001 uid 1002 
+    cache 
+
+## Interface details
+tun0             UNKNOWN        PRIVATE_IP_001/24 IPV6_ADDR_001 
+36278: tun0: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN mode DEFAULT group default qlen 500
+    link/none 
+Settings for tun0:
+	Supported ports: [  ]
+	Supported link modes:   Not reported
+	Supported pause frame use: No
+	Supports auto-negotiation: No
+	Supported FEC modes: Not reported
+	Advertised link modes:  Not reported
+	Advertised pause frame use: No
+	Advertised auto-negotiation: No
+	Advertised FEC modes: Not reported
+	Speed: 10000Mb/s
+	Duplex: Full
+	Auto-negotiation: off
+	Port: Twisted Pair
+	PHYAD: 0
+	Transceiver: internal
+	MDI-X: Unknown
+        Current message level: 0x00000000 (0)
+                              
+	Link detected: yes
+
+## Tool versions
+### ping
+ping: invalid option -- '-'
+
+Usage
+ping from iputils 20240117
+libcap: yes, IDN: yes, NLS: no, error.h: yes, getrandom(): yes, __fpending(): yes
+### tracepath
+tracepath: invalid option -- '-'
+
+Usage
+tracepath from iputils 20240117
+libcap: yes, IDN: yes, NLS: no, error.h: yes, getrandom(): yes, __fpending(): yes
+### mtr
+mtr 0.95
+### nping
+
+Nping version 0.7.94SVN ( https://nmap.org/nping )
+### hping3
+hping3 version 3.0.0-alpha-2 ($Id: release.h,v 1.4 2004/04/09 23:38:56 antirez Exp $)
+This binary is TCL scripting capable
+### iperf3
+iperf 3.16 (cJSON 1.7.15)
+Linux ubuntu 6.8.0-55-generic #57-Ubuntu SMP PREEMPT_DYNAMIC Wed Feb 12 23:42:21 UTC 2025 x86_64
+Optional features available: CPU affinity setting, IPv6 flow label, SCTP, TCP congestion algorithm setting, sendfile / zerocopy, socket pacing, authentication, bind to device, support IPv4 don't fragment, POSIX threads
+### tshark
+TShark (Wireshark) 4.2.2 (Git v4.2.2 packaged as 4.2.2-1.1build3).
+
+Copyright 1998-2024 Gerald Combs <EMAIL_REDACTED> and contributors.
+### tcpdump
+tcpdump version 4.99.4
+libpcap version 1.10.4 (with TPACKET_V3)
+OpenSSL 3.0.13 30 Jan 2024
+### sar
+Usage: sar [ options ] [ <interval> [ <count> ] ]
+Options are:
+[ -A ] [ -B ] [ -b ] [ -C ] [ -D ] [ -d ] [ -F [ MOUNT ] ] [ -H ] [ -h ]
+sysstat version 12.6.1
+(C) Sebastien Godard (sysstat <at> orange.fr)
+### mpstat
+Usage: mpstat [ options ] [ <interval> [ <count> ] ]
+Options are:
+[ -A ] [ -n ] [ -T ] [ -u ] [ -V ]
+sysstat version 12.6.1
+(C) Sebastien Godard (sysstat <at> orange.fr)
+### pidstat
+Usage: pidstat [ options ] [ <interval> [ <count> ] ] [ -e <program> <args> ]
+Options are:
+[ -d ] [ -H ] [ -h ] [ -I ] [ -l ] [ -R ] [ -r ] [ -s ] [ -t ] [ -U [ <username> ] ]
+sysstat version 12.6.1
+(C) Sebastien Godard (sysstat <at> orange.fr)
+### vmstat
+vmstat from procps-ng 4.0.4
+### ss
+ss utility, iproute2-6.1.0
+### nstat
+nstat utility, iproute2-6.1.0
+### openssl
+Invalid command '--version'; type "help" for a list.
+Invalid command '-V'; type "help" for a list.
+### python3
+Python 3.12.3
+### mbpoll: NOT_FOUND
+### modpoll: NOT_FOUND
+### wg: NOT_FOUND
+### openvpn
+OpenVPN 2.6.19 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] [DCO]
+library versions: OpenSSL 3.0.13 30 Jan 2024, LZO 2.10
+DCO version: N/A
+### ipsec: NOT_FOUND
+### strongswan: NOT_FOUND

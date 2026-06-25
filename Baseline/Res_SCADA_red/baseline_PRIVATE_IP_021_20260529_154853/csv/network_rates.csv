@@ -1,6 +1,0 @@
-run_id,scenario,target,iface,metric,label,value,unit,source_file,notes
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,net_rxpck_s,net_rxpck_s,25.530,packets/s,raw/sar_net_dev.log,Promedio sar -n DEV para tun0.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,net_txpck_s,net_txpck_s,34.750,packets/s,raw/sar_net_dev.log,Promedio sar -n DEV para tun0.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,net_rx_kBps,Recepcion promedio,2.235,kB/s,raw/sar_net_dev.log,Promedio sar -n DEV para tun0.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,net_tx_kBps,Transmision promedio,1.795,kB/s,raw/sar_net_dev.log,Promedio sar -n DEV para tun0.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,net_ifutil_pct,Utilizacion de interfaz,0.000,%,raw/sar_net_dev.log,Promedio de utilizacion de interfaz para tun0.

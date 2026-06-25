@@ -1,0 +1,4 @@
+run_id,scenario,target,iface,metric,label,value,unit,source_file,notes
+macsec_PRIVATE_IP_022_20260618_121101,macsec,PRIVATE_IP_022,tun0,pmtu_payload_max_success,Payload ICMP maximo sin fragmentar,1440.00,bytes_icmp_payload,raw/pmtu_ping_M_do.log,Mayor payload ICMP exitoso en lista fija.
+macsec_PRIVATE_IP_022_20260618_121101,macsec,PRIVATE_IP_022,tun0,pmtu_ipv4_approx,PMTU IPv4 aproximada,1468.00,bytes,raw/pmtu_ping_M_do.log,Aproximacion IPv4: payload + 28 bytes.
+macsec_PRIVATE_IP_022_20260618_121101,macsec,PRIVATE_IP_022,tun0,icmp_packet_loss,Perdida ICMP,0.000,%,raw/ping_PRIVATE_IP_022.log,

@@ -1,4 +1,0 @@
-run_id,scenario,target,iface,metric,label,value,unit,source_file,notes
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,pmtu_payload_max_success,Payload ICMP maximo sin fragmentar,1472.00,bytes_icmp_payload,raw/pmtu_ping_M_do.log,Mayor payload ICMP exitoso en lista fija.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,pmtu_ipv4_approx,PMTU IPv4 aproximada,1500.00,bytes,raw/pmtu_ping_M_do.log,Aproximacion IPv4: payload + 28 bytes.
-baseline_PRIVATE_IP_021_20260529_154853,baseline,PRIVATE_IP_021,tun0,icmp_packet_loss,Perdida ICMP,0.000,%,raw/ping_PRIVATE_IP_021.log,

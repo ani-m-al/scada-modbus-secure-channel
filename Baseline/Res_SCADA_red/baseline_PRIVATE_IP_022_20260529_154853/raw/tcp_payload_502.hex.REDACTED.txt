@@ -1,0 +1,7 @@
+# Redacted artifact placeholder
+
+Original path redacted: Baseline/Res_SCADA_red/baseline_PRIVATE_IP_022_20260529_154853/raw/tcp_payload_502.hex
+Original size bytes: 2049412
+Reason: raw capture, binary, archive, credential-like, or payload artifact redacted
+
+The original artifact is not included because it may expose sensitive network, host, packet, credential, or generated dependency data. See SANITIZATION_MANIFEST.csv for the inventory.

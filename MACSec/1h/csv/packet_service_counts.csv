@@ -1,0 +1,7 @@
+run_id,scenario,target,iface,source_method,service,direction,packets,bytes,notes
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,pcap_tshark,ICMP,received_from_target,17399,1490552,Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,pcap_tshark,ICMP,sent_to_target,17499,1496952,Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,pcap_tshark,OTHER,other,104,11240,Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,pcap_tshark,TCP_PORT_502,received_from_target,26460,3015881,Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,pcap_tshark,TCP_PORT_502,sent_to_target,43774,2010004,Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,pcap_tshark,UDP_OTHER,sent_to_target,4,5968,Conteo real desde pcap; TCP_PORT agrupa conexiones TCP al puerto objetivo.

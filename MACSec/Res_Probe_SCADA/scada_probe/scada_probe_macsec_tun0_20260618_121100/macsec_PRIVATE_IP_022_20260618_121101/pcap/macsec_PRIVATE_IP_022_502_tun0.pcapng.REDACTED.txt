@@ -1,0 +1,7 @@
+# Redacted artifact placeholder
+
+Original path redacted: MACSec/Res_Probe_SCADA/scada_probe/scada_probe_macsec_tun0_20260618_121100/macsec_PRIVATE_IP_022_20260618_121101/pcap/macsec_PRIVATE_IP_022_502_tun0.pcapng
+Original size bytes: 3682392
+Reason: raw capture, binary, archive, credential-like, or payload artifact redacted
+
+The original artifact is not included because it may expose sensitive network, host, packet, credential, or generated dependency data. See SANITIZATION_MANIFEST.csv for the inventory.

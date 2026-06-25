@@ -1,0 +1,7 @@
+36278: tun0: <POINTOPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN mode DEFAULT group default qlen 500
+    link/none 
+    RX:   bytes   packets errors dropped  missed   mcast           
+    16479141974 176826241      0       0       0       0 
+    TX:   bytes   packets errors dropped carrier collsns           
+    12476275313 250146569      0     815       0       0 
+[exit_code=0]

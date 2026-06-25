@@ -1,0 +1,17 @@
+run_id,scenario,target,iface,metric,label,value,unit,source_file,notes
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,icmp_packet_loss,Perdida ICMP,0.111111,%,raw/ping_PRIVATE_IP_022.log,
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,icmp_rtt_avg,RTT ICMP promedio,5.633,ms,raw/ping_PRIVATE_IP_022.log,
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,icmp_rtt_mdev,Variacion ICMP,81.942,ms,raw/ping_PRIVATE_IP_022.log,Proxy simple de jitter ICMP.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,tcp_connect_success_rate,Exito TCP connect,100.000000,%,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,tcp_connect_avg,TCP connect promedio,8.202592,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,tcp_connect_p95,TCP connect p95,5.317009,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,tcp_connect_p99,TCP connect p99,7.857457,ms,csv/tcp_connect_stats.csv,Latencia de establecimiento TCP hacia el puerto de servicio.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,pmtu_ipv4_approx,PMTU IPv4 aproximada,1468,bytes,raw/pmtu_ping_M_do.log,Aproximacion IPv4: payload + 28 bytes.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,payload_entropy,Entropia de payload,1.924485,bits_per_byte,csv/payload_entropy.csv,Calculada sobre tcp.payload del puerto especificado en la interfaz capturada.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,cpu_avg_busy_pct,CPU ocupada promedio,7.870,%,raw/sar_cpu.log,Calculado como 100 - %idle promedio.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,net_rx_kBps,Recepcion promedio,2.500,kB/s,raw/sar_net_dev.log,Promedio sar -n DEV para tun0.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,net_tx_kBps,Transmision promedio,1.925,kB/s,raw/sar_net_dev.log,Promedio sar -n DEV para tun0.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,net_rxpck_s,net_rxpck_s,27.600,packets/s,raw/sar_net_dev.log,Promedio sar -n DEV para tun0.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,net_txpck_s,net_txpck_s,37.970,packets/s,raw/sar_net_dev.log,Promedio sar -n DEV para tun0.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,interface_tx_packets_delta,Paquetes TX interfaz,0.000,packets,raw/ip_s_link_before.log;raw/ip_s_link_after.log,Delta TX en tun0.
+MACsec_1h_PRIVATE_IP_022_20260625_003608,MACsec_1h,PRIVATE_IP_022,tun0,interface_rx_packets_delta,Paquetes RX interfaz,0.000,packets,raw/ip_s_link_before.log;raw/ip_s_link_after.log,Delta RX en tun0.
