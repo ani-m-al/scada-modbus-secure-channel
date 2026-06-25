@@ -1,6 +1,18 @@
 # Scripts
 
-Esta carpeta reúne las herramientas usadas para levantar evidencia, caracterizar tráfico Modbus y generar resultados derivados.
+Esta carpeta reúne las herramientas usadas para levantar evidencia, caracterizar tráfico Modbus y generar resultados derivados. Los comandos de este documento usan roles y placeholders publicables; las direcciones reales del laboratorio no deben aparecer en el repositorio público.
+
+La convención de nombres de corridas está en [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md).
+
+## Relación con la Metodología
+
+| Script | Rol en la tesis |
+| --- | --- |
+| `scada_probe_v1.sh` | Levanta evidencia de desempeño, conectividad, recursos y captura básica para un escenario. |
+| `scada_probe_v1_1_multiiface.sh` | Variante preferida cuando se requiere observar varias interfaces en `bridge` o `macsec`. |
+| `modbus_characterizer_v4.py` | Extrae comportamiento de aplicación: ADUs, funciones, endpoints, transacciones, RTT y ciclos de sondeo. |
+| `entropy_calc.py` | Calcula entropía de tráfico Modbus o de la región protegida por MACsec. |
+| `graficar_ram_vmstat.py` | Genera figuras de memoria para comparación por escenario y corrida. |
 
 ## `scada_probe_v1.sh`
 
@@ -21,7 +33,7 @@ Ejemplo:
 ```bash
 sudo ./scripts/scada_probe_v1.sh \
   --label baseline \
-  --target <TARGET_IP> \
+  --target <API_PLC_PRIVATE_IP> \
   --port 502 \
   --iface tun0 \
   --duration 300 \
@@ -47,7 +59,7 @@ Ejemplo:
 ```bash
 sudo ./scripts/scada_probe_v1_1_multiiface.sh \
   --label macsec_1h \
-  --target <TARGET_IP> \
+  --target <API_PLC_PRIVATE_IP> \
   --port 502 \
   --ifaces <IFACE_PLC>,<IFACE_PHY>,macsec0 \
   --duration 3600 \
@@ -141,4 +153,3 @@ Opciones:
 ## `ram_all_runs_index.csv`
 
 Índice de figuras de RAM generadas para varias corridas. Sirve como puente entre los resultados por escenario y las figuras consolidadas.
-

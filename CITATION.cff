@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using the metadata in this file."
+title: "SCADA Modbus Secure Channel"
+type: software
+authors:
+  - family-names: "Macas Villagómez"
+    given-names: "Aníbal Martín"
+  - family-names: "Pallchisaca Valverde"
+    given-names: "Anthony Josué"
+abstract: "Scripts, methodology, and sanitized experimental results for evaluating a transparent secure channel in SCADA/Modbus TCP communications using baseline, bridge, and MACsec scenarios."
+keywords:
+  - SCADA
+  - Modbus TCP
+  - MACsec
+  - OT security
+  - network performance
+  - industrial cybersecurity
+repository-code: "https://github.com/ani-m-al/scada-modbus-secure-channel"
+license: "NOASSERTION"

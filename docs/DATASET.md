@@ -1,38 +1,49 @@
 # Dataset Layout
 
-Este repositorio conserva la forma del árbol original, pero con identificadores saneados.
+Este repositorio conserva la forma del árbol original para mantener trazabilidad con las corridas ejecutadas. Los identificadores sensibles fueron reemplazados por marcadores públicos.
 
-## Directorios de Escenario
+Para nuevos experimentos, usar la convención documentada en [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md).
 
-### `Baseline/`
+## Mapa Lógico
 
-Contiene corridas de referencia. Las subcarpetas incluyen mediciones cortas, análisis Modbus y una corrida de 1 hora en `Rendimiento_1h`.
+| Escenario canónico | Carpeta pública actual | Descripción |
+| --- | --- | --- |
+| `baseline` | `Baseline/` | Comunicación original sin puente ni canal seguro adicional. |
+| `bridge` | `Bridge/` | Comunicación con puente transparente sin cifrado. |
+| `macsec` | `MACSec/` | Comunicación protegida mediante MACsec. |
+
+## `Baseline/`
+
+Contiene corridas de referencia. Las subcarpetas incluyen mediciones cortas, análisis Modbus y una corrida extendida en `Rendimiento_1h`.
 
 Uso típico:
 
-- Establecer métricas base de latencia y recursos.
-- Comparar el perfil Modbus sin canal seguro.
-- Revisar estabilidad en una corrida prolongada.
+- establecer métricas base de latencia y recursos;
+- comparar el perfil Modbus sin canal seguro;
+- revisar estabilidad en una ventana prolongada;
+- estimar umbrales relativos para evaluar `bridge` y `macsec`.
 
-### `Bridge/`
+## `Bridge/`
 
 Contiene resultados del escenario puente/transparente.
 
 Uso típico:
 
-- Aislar el costo de atravesar el puente.
-- Comparar tasas de interfaz frente a baseline.
-- Revisar si el patrón Modbus se mantiene estable.
+- aislar el costo de atravesar el puente;
+- comparar tasas de interfaz frente a línea base;
+- revisar si el patrón Modbus se mantiene estable;
+- separar el sobrecosto del equipo intermedio del sobrecosto criptográfico.
 
-### `MACSec/`
+## `MACSec/`
 
 Contiene resultados del escenario protegido.
 
 Uso típico:
 
-- Evaluar sobrecosto de MACsec.
-- Comparar entropía frente a baseline/bridge.
-- Revisar recursos consumidos por la protección de enlace.
+- evaluar sobrecosto de MACsec;
+- comparar entropía frente a `baseline` y `bridge`;
+- revisar recursos consumidos por la protección de enlace;
+- verificar que el tráfico observado en el enlace protegido no sea decodificable como Modbus útil.
 
 ## Estructura de una Corrida del Probe
 
@@ -57,7 +68,10 @@ Archivos clave:
 - `probe_report.html`: resumen interpretado.
 - `csv/summary.csv`: métricas agregadas.
 - `csv/probe_dataset.csv`: tabla normalizada con muestras y métricas.
-- `csv/key_metrics_compact.csv`: selección de métricas para comparación.
+- `csv/key_metrics_compact.csv`: selección de métricas para comparación rápida.
+- `csv/latency_stats.csv`: latencia agregada.
+- `csv/tcp_connect_stats.csv`: latencia de conexión TCP al puerto Modbus.
+- `csv/cpu_process_summary.csv`: consumo de CPU por proceso.
 - `raw/`: salidas saneadas de herramientas del sistema.
 - `pcap/`: placeholders públicos cuando la captura cruda fue retirada.
 
@@ -82,23 +96,23 @@ Interpretación:
 - `modbus_adus.csv`: unidades de datos Modbus observadas.
 - `modbus_transactions.csv`: asociación request/response y RTT.
 - `function_summary.csv`: distribución por función Modbus.
-- `endpoint_summary.csv`: pares cliente-servidor.
-- `register_activity.csv`: registros consultados.
+- `endpoint_summary.csv`: pares cliente-servidor anonimizados.
+- `register_activity.csv`: registros consultados, con payload sensible redactado cuando aplica.
 - `polling_summary.csv`: periodicidad de consultas.
 - `tcp_stability.csv`: indicadores de estabilidad TCP.
 
 ## Figuras
 
-Las figuras públicas conservan las curvas, pero su título fue reemplazado para no exponer identificadores del entorno. Las rutas de archivo también usan marcadores como `PRIVATE_IP_###`.
+Las figuras públicas conservan las curvas y tendencias, pero los títulos o rutas fueron sustituidos cuando podían exponer identificadores del entorno. Las rutas de archivo usan marcadores como `PRIVATE_IP_###`.
 
 ## Placeholders
 
 Los archivos con sufijo `.REDACTED.txt` sustituyen artefactos que no deben publicarse crudos:
 
-- Capturas `.pcap`/`.pcapng`.
-- Payloads TCP o dumps binarios.
-- Archivos comprimidos.
-- Certificados, claves o artefactos compilados.
+- capturas `.pcap`/`.pcapng`;
+- payloads TCP o dumps binarios;
+- archivos comprimidos;
+- certificados, claves o artefactos compilados.
 
 Cada placeholder indica la razón de sustitución y el tamaño del archivo original.
 
